@@ -8,6 +8,8 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 import React, {Component} from 'react';
 import {  Redirect  } from 'react-router-dom';
 
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import LEAVES_BACK from '../assets/01/leaves_back.png';
 import BIRDIE from '../assets/01/birdie.png';
 import CHILLIN from '../assets/01/chillin_wolma.png';
@@ -53,25 +55,26 @@ class Jumbo extends Component{
     console.log(this.state);
     return(
         <div className="cream-back">
-  
+        <img className="leaves_back_pos" src={LEAVES_BACK}></img>
+
+
           {this.handleRedirect(this.state.redirect_id)}
           <div className="jumbotron" style={{backgroundColor:"transparent", margin:"0 auto"}} fluid>
-          <img className="leaves_back_pos" src={LEAVES_BACK}></img>
           <img className="birdie_pos" src={BIRDIE}></img>
 
-          <div className = "container outline">
+          <div className = "container ">
             <div className= "row">
-              <div className="col outline">
-                <img src={CHILLIN} alt="oldmachillin"></img>
+              <div className="col ">
+                <img className="picforpho" src={CHILLIN} alt="oldmachillin"></img>
               </div>
-              <div className="col outline">
-                <div className="row outline" style={{marginTop:"122px"}}>
-                  <h1 className="yellow-font outline">{this.props.data.title}</h1>
-                  <p className="blue-font outline">{this.props.data.sub}</p>
-                  <h3 className="black-font outline">{this.props.data.sub0}</h3>
+              <div className="col ">
+                <div className="row margin_adjust">
+                  <h1 className="yellow-font ">{this.props.data.title}</h1>
+                  <p className="blue-font ">{this.props.data.sub}</p>
+                  <h3 className="black-font ">{this.props.data.sub0}</h3>
                   <hr />
                 </div>
-                  <div className="row outline">
+                  <div className="row ">
                   <button type="button" className="btn btn--dark btn-sm yellow-back" style={{padding:"7px", marginRight:"6px", borderRadius: "0px", fontSize:"17px"}}><b>More</b></button>
                   
                   <button type="button" className="btn btn--dark btn-sm" style={{padding:"7px", marginRight:"6px", borderRadius: "0px",fontSize:"17px"}}><b>Download Brochure</b></button>

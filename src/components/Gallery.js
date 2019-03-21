@@ -68,7 +68,7 @@ class Gallery extends Component {
 
 
         return (
-            <div className="container-fluid black-back outline" >
+            <div className="container-fluid black-back " >
                   
                 <img className="moon_pos" src={MOON}></img>
                 <img className="mercury_pos" src={MERCURY}></img>
@@ -82,7 +82,7 @@ class Gallery extends Component {
                         <br />
                         <br />
                         <br />
-                        <h2 className="blue-font outline" style={{textAlign:"right"}}>Why?</h2>
+                        <h2 className="blue-font " style={{textAlign:"right"}}>Why?</h2>
                         <br />
                         <br />
                         <br />
@@ -91,8 +91,8 @@ class Gallery extends Component {
                 </div>
          
                 
-                <div className="row outline">
-                    <div className="col-sm-6 outline " style={{marginLeft:"0px"}}>
+                <div className="row ">
+                    <div className="col-sm-6  " style={{marginLeft:"0px"}}>
 
                     <Carousel
                         activeIndex={index}
@@ -139,19 +139,19 @@ class Gallery extends Component {
                     
                     </div>
 
-                    <div className="col  white-font outline" style={{marginLeft:"0px"}}>
-                        <div className="row" style={{marginTop:"30%"}}>
+                    <div className="col  white-font " style={{padding:"30px"}}>
+                        <div className="row margin_adjust0">
 
-                            <h3 className="orange-font outline" style={{textAlign:"right"}}>{title}</h3>
+                            <h3 className="orange-font " style={{textAlign:"right"}}>{title}</h3>
                           
                         </div> 
                         <div className="row" style={{marginTop:"0%"}}>   
-                            <p className="outline">{sub}</p>
+                            <p className="">{sub}</p>
                         </div>
                         
                         <div className="row" style={{marginTop:"2%"}}>
 
-                            <div className=" outline">
+                            <div className=" ">
                                 <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Gallery</button>
                                 
                                 <button type="button" className="btn btn--dark btn-lg blue-font" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Testimonials</button>

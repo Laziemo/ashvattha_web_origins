@@ -19,37 +19,37 @@ class Courses extends Component{
 // ------------------ '(◣_◢)' ------------------
   render(){
     return(
-      <div className="container-fluid outline">
+      <div className="container-fluid ">
       <br />
 
-        <div className="row  outline text_center">
-            <div className="col outline col_centered">
-            <h2 className="text_center blue-font outline"> What? </h2>
+        <div className="row   text_center">
+            <div className="col  col_centered">
+            <h2 className="text_center blue-font "> What? </h2>
             </div>
         </div>
-        <img className="leaves_back_pos_1 outline" src={LEAVES_BACK}></img>
+        <img className="leaves_back_pos_1 " src={LEAVES_BACK}></img>
 
         <div className="row ">
-            <div className="col outline" style={{textAlign: "center"}}>
+            <div className="col " style={{textAlign: "center"}}>
                 <br />
-                <img className="outline" src={YOUTH} style={{display: "block", margin:"auto"}} alt="youth"></img>
+                <img className="" src={YOUTH} style={{display: "block", margin:"auto"}} alt="youth"></img>
                 <br />
                 <br />
-                <h3 className="yellow-font outline" style={{textAlign: "center"}}> Youth </h3>
+                <h3 className="yellow-font " style={{textAlign: "center"}}> Youth </h3>
                 <br />
-                <div className="container outline" style={{width:"340px"}}>
+                <div className="container " style={{width:"340px"}}>
                 <p>Our interactive coaching style builds onfidence in kids via peer interaction. Alongside this we build strong fundamentals through classic Trinity certified training methods.</p>
                 <br />
                 </div>
             </div>
-            <div className="col outline" style={{textAlign: "center"}} >
+            <div className="col " style={{textAlign: "center"}} >
                 <br />
-                <img className="outline" src={CORPORATE} style={{display: "block", margin:"auto", marginTop:"-14px"}} alt="corporate"></img>
+                <img className="" src={CORPORATE} style={{display: "block", margin:"auto", marginTop:"-14px"}} alt="corporate"></img>
                 <br />
                 <br />
-                <h3 className="yellow-font outline"> Corporate </h3>
+                <h3 className="yellow-font "> Corporate </h3>
                 <br />
-                <div className="container outline" style={{width:"340px"}}>
+                <div className="container " style={{width:"340px"}}>
                 <p >Training working professionals in enterprise communication and etiquette.</p>
                 </div>
                 <br />

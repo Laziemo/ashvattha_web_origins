@@ -17,7 +17,7 @@ class FormC extends Component{
     return(
       <div className="wish-back">
       <br />
-        <div className="container outline">
+        <div className="container ">
           
           <h3 style={{textAlign:"center"}}>Email Us</h3>
           <br />
@@ -29,7 +29,7 @@ class FormC extends Component{
           <br />
           <div style={{display: "flex", alignItems: "right",justifyContent:"right"}}>
 
-          <button className="btn btn-lg yellow-back outline" style={{width:"152px"}}  type="submit" onClick={this.handleLoginSubmit}>
+          <button className="btn btn-lg yellow-back " style={{width:"152px"}}  type="submit" onClick={this.handleLoginSubmit}>
           Send
           </button>
          
