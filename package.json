@@ -1,0 +1,47 @@
+{
+  "name": "ashvattha_web_origins",
+  "version": "0.1.0",
+  "description": "Ashvattha Web Origins",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "start": "npm run build && live-server dist"
+  },
+  "keywords": [
+    "react",
+    "parcel",
+    "babel",
+    "redux",
+    "reactstrap"
+  ],
+  "author": "lm0",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.11.0",
+    "perfect-scrollbar": "^1.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-responsive-carousel": "^3.1.47",
+    "react-router-dom": "^4.3.1",
+    "react-typewriter": "^0.4.1",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.0",
+    "sha256": "^0.2.0",
+    "webpack": "^4.29.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3"
+  }
+}
+
