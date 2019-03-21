@@ -37,7 +37,7 @@ toggle() {
 // ------------------ '(◣_◢)' ------------------
 render() {
   return (
-    <div className="cream-back">
+    <div className="cream-back outline">
  
 
       <Navbar color="transparent" light fluid justify expand="md">
@@ -46,14 +46,14 @@ render() {
         src="https://www.iconspng.com/clipart/green-leaves-graphics/green-leaves-graphics.svg"
         width="50"
         height="50"
-        className="d-inline-block align-top"
+        className="d-inline-block align-top outline"
         alt="Logo"
       />
     </NavbarBrand>
-        <NavbarBrand tag={RRNavLink} exact to="/" style={{color:"#ffb833", fontSize:"42px", marginLeft: "0px"}}>Ashvattha</NavbarBrand>
+        <NavbarBrand className="outline" tag={RRNavLink} exact to="/" style={{color:"#ffb833", fontSize:"42px", marginLeft: "0px"}}>Ashvattha</NavbarBrand>
         <NavbarToggler light onClick={this.toggle} />
         <Collapse isOpen={!this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto outline" navbar>
               <NavItem>
                 <NavLink tag={RRNavLink} exact to="/team" style={{color:"#333333",fontSize:"17px", paddingRight: "25px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Team</NavLink>
               </NavItem>

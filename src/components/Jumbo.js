@@ -59,17 +59,17 @@ class Jumbo extends Component{
           <img className="leaves_back_pos" src={LEAVES_BACK}></img>
           <img className="birdie_pos" src={BIRDIE}></img>
 
-          <div className = "container">
+          <div className = "container outline">
             <div className= "row">
-              <div className="col">
+              <div className="col outline">
                 <img src={CHILLIN} alt="oldmachillin"></img>
               </div>
-              <div className="col">
-                <h1 className="yellow-font">{this.props.data.title}</h1>
-                <p className="blue-font">{this.props.data.sub}</p>
-                <p className="black-font">{this.props.data.sub0}</p>
+              <div className="col outline">
+                <h1 className="yellow-font outline">{this.props.data.title}</h1>
+                <p className="blue-font outline">{this.props.data.sub}</p>
+                <p className="black-font outline">{this.props.data.sub0}</p>
                 <hr />
-                <div className="btn-toolbar">
+                <div className="btn-toolbar outline">
                 <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>More</button>
                 
                 <button type="button" className="btn btn--dark btn-lg" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Download Brochure</button>
