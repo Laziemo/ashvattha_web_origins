@@ -55,16 +55,16 @@ render() {
         <Collapse isOpen={!this.state.isOpen} navbar>
             <Nav className="ml-auto outline" navbar>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/team" style={{color:"#333333",fontSize:"17px", paddingRight: "25px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Team</NavLink>
+                <NavLink tag={RRNavLink} exact to="/team" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Team</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/events" style={{color:"#333333", fontSize:"17px", paddingRight: "25px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none',outline:"none"}}>Events</NavLink>
+                <NavLink tag={RRNavLink} exact to="/events" style={{color:"#333333", fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none',outline:"none"}}>Events</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/moments" style={{color:"#333333",fontSize:"17px", paddingRight: "25px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Moments</NavLink>
+                <NavLink tag={RRNavLink} exact to="/moments" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Moments</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/contact" style={{color:"#333333",fontSize:"17px", paddingRight: "25px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Contact</NavLink>
+                <NavLink tag={RRNavLink} exact to="/contact" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Contact</NavLink>
               </NavItem>
             </Nav>
         </Collapse>

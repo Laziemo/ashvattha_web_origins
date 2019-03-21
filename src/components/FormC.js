@@ -27,9 +27,9 @@ class FormC extends Component{
           <br />
           <textarea name='message' type="text" style={{background:"transparent"}} className="form-control form-control-lg text_center" id="message" placeholder="Message" row="7" onChange={event => this.handleChange(event)} />
           <br />
-          <div style={{display: "flex", alignItems: "center",justifyContent:"center"}}>
+          <div style={{display: "flex", alignItems: "right",justifyContent:"right"}}>
 
-          <button className="btn btn-lg yellow-back outline"  type="submit" onClick={this.handleLoginSubmit}>
+          <button className="btn btn-lg yellow-back outline" style={{width:"152px"}}  type="submit" onClick={this.handleLoginSubmit}>
           Send
           </button>
          

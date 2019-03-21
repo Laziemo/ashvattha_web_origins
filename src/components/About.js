@@ -19,18 +19,17 @@ class About extends Component{
   render(){
     return(
       <div className="white-back outline">
-      <br />
-      <br />
+   
 
         <div className="container-fluid">
           <img className="leaves_back_pos_0" src={LEAVES_BACK}></img>
 
           <div className="row">
-            <div className="col outline" style={{marginLeft:"0%"}}>
-              <div className="row offset-md-2 outline ">
+            <div className="col outline" style={{marginTop:"8%"}}>
+              <div className="row outline offset-md-2">
                 <h2 className="blue-font outline">Who?</h2>
               </div>
-              <div className="row offset-md-2 outline" style={{maxWidth:"420px"}}>
+              <div className="row outline offset-md-2" style={{maxWidth:"420px"}}>
                 <p className="black-font outline">Chuck Norris can slam a revolving door. Chuck Norris can have his cake and eat it, too. Chuck Norris is currently suing NBC, claiming Law and Order are trademarked names for his left and right legs Chuck Norris can slice meat so thin is only has one side.</p>
               </div>
             </div>

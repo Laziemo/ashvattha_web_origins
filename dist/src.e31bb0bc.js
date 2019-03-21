@@ -44390,7 +44390,7 @@ function (_Component) {
         style: {
           color: "#333333",
           fontSize: "17px",
-          paddingRight: "25px"
+          paddingRight: "72px"
         },
         activeStyle: {
           backgroundColor: '#2e2f31',
@@ -44404,7 +44404,7 @@ function (_Component) {
         style: {
           color: "#333333",
           fontSize: "17px",
-          paddingRight: "25px"
+          paddingRight: "72px"
         },
         activeStyle: {
           backgroundColor: '#2e2f31',
@@ -44418,7 +44418,7 @@ function (_Component) {
         style: {
           color: "#333333",
           fontSize: "17px",
-          paddingRight: "25px"
+          paddingRight: "72px"
         },
         activeStyle: {
           backgroundColor: '#2e2f31',
@@ -44432,7 +44432,7 @@ function (_Component) {
         style: {
           color: "#333333",
           fontSize: "17px",
-          paddingRight: "25px"
+          paddingRight: "72px"
         },
         activeStyle: {
           backgroundColor: '#2e2f31',
@@ -44587,36 +44587,35 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "row outline",
         style: {
-          marginTop: "148px"
+          marginTop: "122px"
         }
       }, _react.default.createElement("h1", {
         className: "yellow-font outline"
       }, this.props.data.title), _react.default.createElement("p", {
         className: "blue-font outline"
-      }, this.props.data.sub), _react.default.createElement("p", {
-        className: "black-font outline",
-        style: {
-          fontSize: "30px"
-        }
+      }, this.props.data.sub), _react.default.createElement("h3", {
+        className: "black-font outline"
       }, this.props.data.sub0), _react.default.createElement("hr", null)), _react.default.createElement("div", {
         className: "row outline"
       }, _react.default.createElement("button", {
         type: "button",
-        className: "btn btn--dark btn-lg yellow-back",
+        className: "btn btn--dark btn-sm yellow-back",
         style: {
-          padding: "10px",
+          padding: "7px",
           marginRight: "6px",
-          borderRadius: "0px"
+          borderRadius: "0px",
+          fontSize: "17px"
         }
-      }, "More"), _react.default.createElement("button", {
+      }, _react.default.createElement("b", null, "More")), _react.default.createElement("button", {
         type: "button",
-        className: "btn btn--dark btn-lg",
+        className: "btn btn--dark btn-sm",
         style: {
-          padding: "10px",
+          padding: "7px",
           marginRight: "6px",
-          borderRadius: "0px"
+          borderRadius: "0px",
+          fontSize: "17px"
         }
-      }, "Download Brochure"))), _react.default.createElement("br", null), _react.default.createElement("br", null)))));
+      }, _react.default.createElement("b", null, "Download Brochure")))), _react.default.createElement("br", null), _react.default.createElement("br", null)))));
     } // ------------------ '(◣_◢)' ------------------
 
   }]);
@@ -44689,7 +44688,7 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "white-back outline"
-      }, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }, _react.default.createElement("div", {
         className: "container-fluid"
       }, _react.default.createElement("img", {
         className: "leaves_back_pos_0",
@@ -44699,14 +44698,14 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "col outline",
         style: {
-          marginLeft: "0%"
+          marginTop: "8%"
         }
       }, _react.default.createElement("div", {
-        className: "row offset-md-2 outline "
+        className: "row outline offset-md-2"
       }, _react.default.createElement("h2", {
         className: "blue-font outline"
       }, "Who?")), _react.default.createElement("div", {
-        className: "row offset-md-2 outline",
+        className: "row outline offset-md-2",
         style: {
           maxWidth: "420px"
         }
@@ -57078,11 +57077,14 @@ function (_Component) {
       }), _react.default.createElement("br", null), _react.default.createElement("div", {
         style: {
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
+          alignItems: "right",
+          justifyContent: "right"
         }
       }, _react.default.createElement("button", {
         className: "btn btn-lg yellow-back outline",
+        style: {
+          width: "152px"
+        },
         type: "submit",
         onClick: this.handleLoginSubmit
       }, "Send")), _react.default.createElement("br", null)), _react.default.createElement("br", null));
@@ -59776,7 +59778,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40813" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39433" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

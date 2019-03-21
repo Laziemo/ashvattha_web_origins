@@ -65,16 +65,16 @@ class Jumbo extends Component{
                 <img src={CHILLIN} alt="oldmachillin"></img>
               </div>
               <div className="col outline">
-                <div className="row outline" style={{marginTop:"148px"}}>
+                <div className="row outline" style={{marginTop:"122px"}}>
                   <h1 className="yellow-font outline">{this.props.data.title}</h1>
                   <p className="blue-font outline">{this.props.data.sub}</p>
-                  <p className="black-font outline" style={{ fontSize:"30px"}}>{this.props.data.sub0}</p>
+                  <h3 className="black-font outline">{this.props.data.sub0}</h3>
                   <hr />
                 </div>
                   <div className="row outline">
-                  <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>More</button>
+                  <button type="button" className="btn btn--dark btn-sm yellow-back" style={{padding:"7px", marginRight:"6px", borderRadius: "0px", fontSize:"17px"}}><b>More</b></button>
                   
-                  <button type="button" className="btn btn--dark btn-lg" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Download Brochure</button>
+                  <button type="button" className="btn btn--dark btn-sm" style={{padding:"7px", marginRight:"6px", borderRadius: "0px",fontSize:"17px"}}><b>Download Brochure</b></button>
                   </div>
                 
               </div>
