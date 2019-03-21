@@ -44584,14 +44584,22 @@ function (_Component) {
         alt: "oldmachillin"
       })), _react.default.createElement("div", {
         className: "col outline"
+      }, _react.default.createElement("div", {
+        className: "row outline",
+        style: {
+          marginTop: "148px"
+        }
       }, _react.default.createElement("h1", {
         className: "yellow-font outline"
       }, this.props.data.title), _react.default.createElement("p", {
         className: "blue-font outline"
       }, this.props.data.sub), _react.default.createElement("p", {
-        className: "black-font outline"
-      }, this.props.data.sub0), _react.default.createElement("hr", null), _react.default.createElement("div", {
-        className: "btn-toolbar outline"
+        className: "black-font outline",
+        style: {
+          fontSize: "30px"
+        }
+      }, this.props.data.sub0), _react.default.createElement("hr", null)), _react.default.createElement("div", {
+        className: "row outline"
       }, _react.default.createElement("button", {
         type: "button",
         className: "btn btn--dark btn-lg yellow-back",
@@ -44694,11 +44702,11 @@ function (_Component) {
           marginLeft: "0%"
         }
       }, _react.default.createElement("div", {
-        className: "row "
+        className: "row offset-md-2 outline "
       }, _react.default.createElement("h2", {
         className: "blue-font outline"
       }, "Who?")), _react.default.createElement("div", {
-        className: "row",
+        className: "row offset-md-2 outline",
         style: {
           maxWidth: "420px"
         }
@@ -44707,8 +44715,9 @@ function (_Component) {
       }, "Chuck Norris can slam a revolving door. Chuck Norris can have his cake and eat it, too. Chuck Norris is currently suing NBC, claiming Law and Order are trademarked names for his left and right legs Chuck Norris can slice meat so thin is only has one side."))), _react.default.createElement("div", {
         className: "col outline"
       }, _react.default.createElement("div", {
-        className: "col col_centered "
+        className: "col outline outcol_centered "
       }, _react.default.createElement("img", {
+        className: "outline",
         src: _storytime.default,
         alt: "StoryTime"
       }))))), _react.default.createElement("br", null));
@@ -44789,13 +44798,13 @@ function (_Component) {
       return _react.default.createElement("div", {
         className: "container-fluid outline"
       }, _react.default.createElement("br", null), _react.default.createElement("div", {
-        className: "row  text_center"
+        className: "row  outline text_center"
       }, _react.default.createElement("div", {
-        className: "col col_centered"
+        className: "col outline col_centered"
       }, _react.default.createElement("h2", {
         className: "text_center blue-font outline"
       }, " What? "))), _react.default.createElement("img", {
-        className: "leaves_back_pos_1",
+        className: "leaves_back_pos_1 outline",
         src: _leaves_back.default
       }), _react.default.createElement("div", {
         className: "row "
@@ -44832,7 +44841,8 @@ function (_Component) {
         src: _corporate.default,
         style: {
           display: "block",
-          margin: "auto"
+          margin: "auto",
+          marginTop: "-14px"
         },
         alt: "corporate"
       }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("h3", {
@@ -56854,16 +56864,19 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "col",
         style: {
-          marginLeft: "15px"
+          marginRight: "15px"
         }
       }, _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("h2", {
-        className: "blue-font outline"
+        className: "blue-font outline",
+        style: {
+          textAlign: "right"
+        }
       }, "Why?"), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null))), _react.default.createElement("div", {
         className: "row outline"
       }, _react.default.createElement("div", {
         className: "col-sm-6 outline ",
         style: {
-          marginLeft: "10px"
+          marginLeft: "0px"
         }
       }, _react.default.createElement(_reactBootstrap.Carousel, {
         activeIndex: index,
@@ -56911,7 +56924,7 @@ function (_Component) {
       }))), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("div", {
         className: "col  white-font outline",
         style: {
-          marginLeft: "25px"
+          marginLeft: "0px"
         }
       }, _react.default.createElement("div", {
         className: "row",
@@ -56919,7 +56932,10 @@ function (_Component) {
           marginTop: "30%"
         }
       }, _react.default.createElement("h3", {
-        className: "orange-font outline"
+        className: "orange-font outline",
+        style: {
+          textAlign: "right"
+        }
       }, title)), _react.default.createElement("div", {
         className: "row",
         style: {
@@ -56933,7 +56949,7 @@ function (_Component) {
           marginTop: "2%"
         }
       }, _react.default.createElement("div", {
-        className: "btn-toolbar outline"
+        className: " outline"
       }, _react.default.createElement("button", {
         type: "button",
         className: "btn btn--dark btn-lg yellow-back",
@@ -57151,22 +57167,17 @@ function (_Component) {
     // ------------------ '(◣_◢)' ------------------
     value: function render() {
       return _react.default.createElement("div", {
-        className: "cream-back outline",
+        className: "container-fluid cream-back ",
         style: {
           textAlign: "left"
         }
-      }, _react.default.createElement("div", {
-        className: "container-fluid outline"
       }, _react.default.createElement("img", {
         className: "leaves_back_pos",
         src: _leaves_back.default
       }), _react.default.createElement("div", {
-        className: "row outline"
+        className: "row"
       }, _react.default.createElement("div", {
-        className: "col outline",
-        style: {
-          marginLeft: "25px"
-        }
+        className: "col outline"
       }, _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "row  outline"
       }, _react.default.createElement("div", {
@@ -57212,7 +57223,7 @@ function (_Component) {
         }
       }, "ashvattha_web.origins(UnderConstruction)::created by gita::design_element"), _react.default.createElement("br", null)), _react.default.createElement("div", {
         className: "col wish-back outline"
-      }, _react.default.createElement(_FormC.default, null), _react.default.createElement("br", null)))));
+      }, _react.default.createElement(_FormC.default, null), _react.default.createElement("br", null))));
     } // ------------------ '(◣_◢)' ------------------
 
   }]);
@@ -59765,7 +59776,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43621" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40813" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

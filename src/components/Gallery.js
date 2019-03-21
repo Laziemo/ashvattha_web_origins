@@ -78,11 +78,11 @@ class Gallery extends Component {
                 <img className="star1_pos" src={STAR1}></img>
             
                 <div className="row">
-                    <div className="col" style={{marginLeft:"15px"}}>
+                    <div className="col" style={{marginRight:"15px"}}>
                         <br />
                         <br />
                         <br />
-                        <h2 className="blue-font outline">Why?</h2>
+                        <h2 className="blue-font outline" style={{textAlign:"right"}}>Why?</h2>
                         <br />
                         <br />
                         <br />
@@ -92,7 +92,7 @@ class Gallery extends Component {
          
                 
                 <div className="row outline">
-                    <div className="col-sm-6 outline " style={{marginLeft:"10px"}}>
+                    <div className="col-sm-6 outline " style={{marginLeft:"0px"}}>
 
                     <Carousel
                         activeIndex={index}
@@ -139,10 +139,10 @@ class Gallery extends Component {
                     
                     </div>
 
-                    <div className="col  white-font outline" style={{marginLeft:"25px"}}>
+                    <div className="col  white-font outline" style={{marginLeft:"0px"}}>
                         <div className="row" style={{marginTop:"30%"}}>
 
-                            <h3 className="orange-font outline">{title}</h3>
+                            <h3 className="orange-font outline" style={{textAlign:"right"}}>{title}</h3>
                           
                         </div> 
                         <div className="row" style={{marginTop:"0%"}}>   
@@ -151,7 +151,7 @@ class Gallery extends Component {
                         
                         <div className="row" style={{marginTop:"2%"}}>
 
-                            <div className="btn-toolbar outline">
+                            <div className=" outline">
                                 <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Gallery</button>
                                 
                                 <button type="button" className="btn btn--dark btn-lg blue-font" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Testimonials</button>

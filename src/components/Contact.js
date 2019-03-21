@@ -20,14 +20,14 @@ class Contact extends Component{
 // ------------------ '(◣_◢)' ------------------
   render(){
     return(
-      <div className="cream-back outline" style={{textAlign: "left"}}>
-        <div className="container-fluid outline">
+     
+        <div className="container-fluid cream-back " style={{textAlign: "left"}}>
         <img className="leaves_back_pos" src={LEAVES_BACK}></img>
 
-          <div className="row outline">
+          <div className="row">
             
 
-              <div className="col outline" style={{marginLeft:"25px"}}>
+              <div className="col outline">
                   <br />
 
                   <div className="row  outline">
@@ -95,7 +95,7 @@ class Contact extends Component{
          
         </div>
 
-      </div>
+   
 
       );
   }

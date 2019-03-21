@@ -27,18 +27,18 @@ class About extends Component{
 
           <div className="row">
             <div className="col outline" style={{marginLeft:"0%"}}>
-              <div className="row ">
+              <div className="row offset-md-2 outline ">
                 <h2 className="blue-font outline">Who?</h2>
               </div>
-              <div className="row" style={{maxWidth:"420px"}}>
+              <div className="row offset-md-2 outline" style={{maxWidth:"420px"}}>
                 <p className="black-font outline">Chuck Norris can slam a revolving door. Chuck Norris can have his cake and eat it, too. Chuck Norris is currently suing NBC, claiming Law and Order are trademarked names for his left and right legs Chuck Norris can slice meat so thin is only has one side.</p>
               </div>
             </div>
           
 
             <div className="col outline">
-            <div className="col col_centered ">
-            <img src={STORY_TIME} alt="StoryTime"></img>
+            <div className="col outline outcol_centered ">
+            <img className="outline" src={STORY_TIME} alt="StoryTime"></img>
             </div>
             
             </div>

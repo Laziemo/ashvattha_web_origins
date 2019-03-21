@@ -65,15 +65,18 @@ class Jumbo extends Component{
                 <img src={CHILLIN} alt="oldmachillin"></img>
               </div>
               <div className="col outline">
-                <h1 className="yellow-font outline">{this.props.data.title}</h1>
-                <p className="blue-font outline">{this.props.data.sub}</p>
-                <p className="black-font outline">{this.props.data.sub0}</p>
-                <hr />
-                <div className="btn-toolbar outline">
-                <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>More</button>
-                
-                <button type="button" className="btn btn--dark btn-lg" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Download Brochure</button>
+                <div className="row outline" style={{marginTop:"148px"}}>
+                  <h1 className="yellow-font outline">{this.props.data.title}</h1>
+                  <p className="blue-font outline">{this.props.data.sub}</p>
+                  <p className="black-font outline" style={{ fontSize:"30px"}}>{this.props.data.sub0}</p>
+                  <hr />
                 </div>
+                  <div className="row outline">
+                  <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>More</button>
+                  
+                  <button type="button" className="btn btn--dark btn-lg" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Download Brochure</button>
+                  </div>
+                
               </div>
             <br />
             <br />

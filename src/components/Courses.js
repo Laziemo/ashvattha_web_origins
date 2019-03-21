@@ -22,12 +22,12 @@ class Courses extends Component{
       <div className="container-fluid outline">
       <br />
 
-        <div className="row  text_center">
-            <div className="col col_centered">
+        <div className="row  outline text_center">
+            <div className="col outline col_centered">
             <h2 className="text_center blue-font outline"> What? </h2>
             </div>
         </div>
-        <img className="leaves_back_pos_1" src={LEAVES_BACK}></img>
+        <img className="leaves_back_pos_1 outline" src={LEAVES_BACK}></img>
 
         <div className="row ">
             <div className="col outline" style={{textAlign: "center"}}>
@@ -44,7 +44,7 @@ class Courses extends Component{
             </div>
             <div className="col outline" style={{textAlign: "center"}} >
                 <br />
-                <img className="outline" src={CORPORATE} style={{display: "block", margin:"auto"}} alt="corporate"></img>
+                <img className="outline" src={CORPORATE} style={{display: "block", margin:"auto", marginTop:"-14px"}} alt="corporate"></img>
                 <br />
                 <br />
                 <h3 className="yellow-font outline"> Corporate </h3>
