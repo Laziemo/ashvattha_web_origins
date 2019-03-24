@@ -9,10 +9,10 @@ import React, {Component} from 'react';
 
 
 import Jumbo from "./Jumbo";
-import About from "./About";
-import Courses from "./Courses";
-import Gallery from "./Gallery";
-import Contact from "./Contact";
+import Who from "./Who";
+import What from "./What";
+import Why from "./Why";
+import Where from "./Where";
 
 import HOME_JUMBO from "../data/homeJumbo"
 
@@ -27,12 +27,12 @@ class MainSpace extends Component{
 // ------------------ '(◣_◢)' ------------------
   render(){
     return(
-      <div className="cream-back ">
+      <div className="white-back ">
         <Jumbo data={HOME_JUMBO} />
-        <About />
-        <Courses />
-        <Gallery />
-        <Contact />
+        <Who />
+        <What />
+        <Why />
+        <Where />
       </div>
     );
   }

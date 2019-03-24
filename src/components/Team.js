@@ -6,110 +6,77 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 */
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 import React, {Component} from 'react';
+import { Spring } from 'react-spring/renderprops'
+
 
 import UNIT_DATA from '../data/unitData.js';
+import LSTAIR from '../assets/final_complete/leftstair.png';
+import RSTAIR from '../assets/final_complete/rightstair.png';
 
 import "../basics.css";
 
 
-class Unit extends Component {
-  render() {
+const Unit = (props)=>{
+  
     return (
-      <div>
-        <div className="row">
-          <div className="col ">
-            <img src={this.props.data.img} className="img-fluid" style={{width: "60%", height: "60%"}} alt={this.props.data.alt} />
-          </div>
-          <div className="col ">
-            <h2>{this.props.data.title}</h2>
-            <h4>{this.props.data.sub}</h4>
-            <p>{this.props.data.content}</p>
-          </div>
-        </div>
-      </div>
+    
+          <div className="col-md-4 col_centered ">
+              <div className="row">
+                <img src={props.data.img} style={{width: "50%", height: "50%", margin:"0 auto"}} alt={props.data.alt} />
+              </div>
+          
+            <div className="row ">
+
+              <div className="container col_centered ">
+                <h3 className="text-center">{props.data.title}</h3>
+                <h4 className="text-center">{props.data.sub}</h4>
+                <p className="text-center">{props.data.content}</p>
+              </div>
+            </div>
+          </div>  
     );
-  }
+
 }
 
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 class Team extends Component{
 
+  constructor(props){
+    super(props);
+
+  }
+
+  
 // ------------------ '(◣_◢)' ------------------
   render(){
     return(
-      <div className="svg_backs_slant ">
+      <div className="container-fluid white-back">
       <br />
-      <br />
-      <br />
-
-        <div className="container">
-          
-          <div className="row ">
-
-            <div className="col" style={{textAlign: "right"}}>
-              <h2>{UNIT_DATA[0].title}</h2>
-              <h4 className="orange-font">{UNIT_DATA[0].sub}</h4>
-              <p>{UNIT_DATA[0].content}</p>
-            </div>
-
-            <div className="col-md-2 ">
-              <div className=" image-fit">
-                <img src={UNIT_DATA[0].img} className="img-fluid" style={{width: "148px", height: "148px"}} alt={UNIT_DATA[0].alt} />
-              </div>
-            </div>
-
-          </div>
-
-          <br />
-          <br />
-          <br />
-          <br />
-
+      <Spring
+            from={{ opacity: 0 }}
+            to={{ opacity: 1 }}
+            config={{delay: 200, tension: 60}}>
+        {Props => (
+        <div style={Props}>
+        <img src={LSTAIR} className="lstair"></img>
+        <br />
           <div className="row">
-
-            <div className="col" style={{textAlign: "right"}}>
-              <h2>{UNIT_DATA[1].title}</h2>
-              <h4 className="orange-font">{UNIT_DATA[1].sub}</h4>
-              <p>{UNIT_DATA[1].content}</p>
-            </div>
-
-            <div className="col-md-2 ">
-              <div className=" image-fit">
-                <img src={UNIT_DATA[1].img} className="img-fluid" style={{width: "148px", height: "148px"}} alt={UNIT_DATA[1].alt} />
-              </div>
-            </div>
-
+          {
+            UNIT_DATA.map((unit)=>{
+            return(
+              <Unit key={unit.id} data={unit} />
+            )
+            })
+          }
           </div>
-
+      
+          <img src={RSTAIR} className="rstair"></img>
           <br />
           <br />
           <br />
-          <br />
-
-          <div className="row">
-
-            <div className="col" style={{textAlign: "right"}}>
-              <h2>{UNIT_DATA[2].title}</h2>
-              <h4 className="orange-font">{UNIT_DATA[2].sub}</h4>
-              <p>{UNIT_DATA[2].content}</p>
-            </div>
-
-            <div className="col-md-2">
-              <div className=" image-fit">
-                <img src={UNIT_DATA[2].img} className="img-fluid" style={{width: "148px", height: "148px"}} alt={UNIT_DATA[2].alt} />
-              </div>
-            </div>
-
-          </div>
-          
-          <br />
-          <br />
-          <br />
-          <br />
-
-        </div>
+        </div>)}
+        </Spring>
       </div>
-
       );
   }
 // ------------------ '(◣_◢)' ------------------

@@ -6,9 +6,10 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 */
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 import React, {Component} from 'react';
-import {  Redirect  } from 'react-router-dom';
-
-import ScrollAnimation from 'react-animate-on-scroll';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { Spring } from 'react-spring/renderprops'
 
 import LEAVES_BACK from '../assets/01/leaves_back.png';
 import BIRDIE from '../assets/01/birdie.png';
@@ -16,84 +17,126 @@ import CHILLIN from '../assets/01/chillin_wolma.png';
 import "../basics.css";
 
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
+const styles = () => ({
+  input: {
+    display: 'none',
+  },
+  yellow:{
+    borderRadius: "0px",
+    marginRight: "12px",
+
+    color: "#333333",
+    backgroundColor: '#ffb833',
+    fontFamily: "Quicksand",
+    '&:hover': {
+      backgroundColor: '#4fb0c6',
+    },
+  },
+  transparent:{
+    borderRadius: "0px",
+
+    color: "#333333",
+    backgroundColor: 'transparent',
+    fontFamily: "Quicksand",
+
+    '&:hover': {
+      backgroundColor: '#ffb833',
+    },
+  }
+});
+// ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 class Jumbo extends Component{
 // ------------------ '(◣_◢)' ------------------
   constructor(props){
     super(props);
     console.log(`JUMBO PROPS: ${props.data.title}`);
     this.state = {
-      redirect: false,
-      redirect_id: 0
+      action: false
     }
-    this.handleRedirect = this.handleRedirect.bind(this);
-
+    this.handleClick = this.handleClick.bind(this);
   }
 // ------------------ '(◣_◢)' ------------------
   handleClick(id){
-    this.setState({redirect: true, redirect_id: id});
+    this.setState({action: id});
   }
 
-// ------------------ '(◣_◢)' ------------------
-  handleRedirect(id){
-    if(this.state.redirect){
-      if(id===1){
-        return (<Redirect to="/works" />);
-      }
-      else if(id===2){
-        return <Redirect to="/services" />
-      }
-      else if(id===3){
-        return <Redirect to="/works" />
-      }
-      else{
-        alert("BUG!");
-      }
-    }
-  }
 // ------------------ '(◣_◢)' ------------------
   render(){
-    console.log(this.state);
+    const { classes } = this.props;
+    
     return(
-        <div className="cream-back">
-        <img className="leaves_back_pos" src={LEAVES_BACK}></img>
+      <div className="cream-back">
+        <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}
+          config={{delay: 200, tension: 60}}>
+          {props => 
+          <div style={props}>
 
 
-          {this.handleRedirect(this.state.redirect_id)}
-          <div className="jumbotron" style={{backgroundColor:"transparent", margin:"0 auto"}} fluid>
-          <img className="birdie_pos" src={BIRDIE}></img>
+            <div className="jumbotron" style={{backgroundColor:"transparent", margin:"0 auto"}}>
+              <img className="birdie_pos" src={BIRDIE}></img>
 
-          <div className = "container ">
-            <div className= "row">
-              <div className="col ">
-                <img className="picforpho" src={CHILLIN} alt="oldmachillin"></img>
-              </div>
-              <div className="col ">
-                <div className="row margin_adjust">
-                  <h1 className="yellow-font ">{this.props.data.title}</h1>
-                  <p className="blue-font ">{this.props.data.sub}</p>
-                  <h3 className="black-font ">{this.props.data.sub0}</h3>
-                  <hr />
-                </div>
-                  <div className="row ">
-                  <button type="button" className="btn btn--dark btn-sm yellow-back" style={{padding:"7px", marginRight:"6px", borderRadius: "0px", fontSize:"17px"}}><b>More</b></button>
-                  
-                  <button type="button" className="btn btn--dark btn-sm" style={{padding:"7px", marginRight:"6px", borderRadius: "0px",fontSize:"17px"}}><b>Download Brochure</b></button>
+              <div className = "container">
+                <div className= "row">
+
+                  <div className="col ">
+                    <img className="picforpho" src={CHILLIN} alt="oldmachillin"></img>
                   </div>
-                
-              </div>
-            <br />
-            <br />
-            </div>
-          </div>
 
-          </div>
-       </div>
-      );
-    }
+
+                  <div className="col" style={{marginLeft:"0px"}}>
+
+                    <div className="row margin_adjust">
+                      <h1 className="yellow-font ">{this.props.data.title}</h1>
+                    </div>
+                    <div className="row ">
+                      <p className="blue-font ">{this.props.data.sub}</p>
+                    </div>
+                    <div className="row ">
+                      <h3 className="black-font ">{this.props.data.sub0}</h3>
+                      <hr />
+                    </div>
+
+                    <div className="row ">
+
+                        <Button 
+                          variant="outlined" 
+                          component="button"
+                          className={classes.yellow}
+                          onClick={() => {this.handleClick(0)} }
+                          >
+                        Learn More
+                        </Button>
+
+                        <Button 
+                          variant="outlined"
+                          component="button"
+                          className={classes.transparent} 
+                          onClick={() => {this.handleClick(1)} }
+                          >
+                          Get Brochure
+                        </Button>
+                    </div>
+                  </div>
+                    
+                </div>
+                <br />
+              </div>
+              </div>
+            </div>}
+      
+        </Spring>
+      </div>
+  
+    );
+  }
 // ------------------ '(◣_◢)' ------------------
 }
 // ------------------° ̿ ̿'''\̵͇̿̿\з=(◕_◕)=ε/̵͇̿̿/'̿'̿ ̿ °------------------
-
+Jumbo.propTypes = {
+  classes: PropTypes.object.isRequired
+};
 // ------------------° ̿ ̿'''\̵͇̿̿\з=(◕_◕)=ε/̵͇̿̿/'̿'̿ ̿ °------------------
-export default Jumbo;
+export default withStyles(styles)(Jumbo);
 //    ‛¯¯٭٭¯¯(▫▫)¯¯٭٭¯¯’      FIN     ‛¯¯٭٭¯¯(▫▫)¯¯٭٭¯¯’

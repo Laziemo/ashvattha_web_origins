@@ -3,28 +3,43 @@
     Data to fill up Team Units
 */
 
+import FRAME from "../assets/final_complete/frame.png";
 
 const UNIT_DATA = [
     {
-    title: "Fun",
-    img: "https://image.flaticon.com/icons/svg/719/719747.svg",
-    sub: "Story-telling & Theatre Workshop",
-    content: "Learning through interaction.",
-    alt: "artist"
+    title: "Shyla Kurma",
+    img: FRAME,
+    sub: "Lead Creative",
+    content: "Learning through interaction. ",
+    alt: "Shyla"
     },
     {
-    title: "Work",
-    img: "https://image.flaticon.com/icons/svg/1197/1197409.svg",
-    sub: "Trinity Langugae Traning",
-    content: "Building the foudnations of language.",
-    alt: "developer"
+    title: "Kakoli Chatterjee",
+    img: FRAME,
+    sub: "Legendary Coach",
+    content: "Building the foundations of language.",
+    alt: "Kakoli"
     },
     {
-    title: "Corportate",
-    img: "https://image.flaticon.com/icons/svg/1055/1055669.svg",
-    sub: "SEO.DigitalMarketing",
-    content: "Bringing value to corporate communications.",
-    alt: "hustler"
+    title: "Sanghita Basuroy",
+    img: FRAME,
+    sub: "Awesome Human",
+    content: "Making learning fun.",
+    alt: "Sanghita"
+    },
+    {
+    title: "Shashank Dutt",
+    img: FRAME,
+    sub: "Security",
+    content: "Keeping the peace.",
+    alt: "Shashank"
+    } ,
+    {
+    title: "Whiskey Kurma",
+    img: FRAME,
+    sub: "Auditor",
+    content: "Maintaining the standards.",
+    alt: "Gundappa"
     }
 ];
 

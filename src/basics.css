@@ -94,7 +94,7 @@ padding: 1%
 
 
 .zero{
-  background-color: ##333333;
+  background-color: #333333;
 
 }
 .one{
@@ -145,6 +145,16 @@ padding: 1%
   height: 70px;
   width: 70px;
 }
+.lstair{
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+}
+.rstair{
+  position: absolute;
+  z-index: 1;
+  right: 0%;
+}
 
 .leaves_back_pos{
   position: absolute;
@@ -158,30 +168,31 @@ padding: 1%
   position: absolute;
   z-index: 1;
   left: 36%;
-  top: 82%;
+  top: 92%;
   right: 10%;
 
 }
 .leaves_back_pos_1{
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   left: 30%;
   right: 10%;
-  top: 150%;
+  top: 180%;
 }
 
 .leaves_back_pos_3{
-  position: relative;
+  position: absolute;
   z-index: 1;
   left: 40%;
   right: 10%;
-  top: 50%;
+  top: 240%;
 }
+
 .birdie_pos{
   position: absolute;
   z-index: 10;
-  left: 10%;
-  top: 30%;
+  left: 20%;
+  top: 20%;
   right: 20%;
 }
 
@@ -189,8 +200,8 @@ padding: 1%
 .moon_pos{
   position: absolute;
   z-index: 10;
-  left: 25%;;
-  right: 20%;
+  left: 50%;
+  right: 2%;
 }
 
 .mercury_pos{
@@ -208,8 +219,9 @@ padding: 1%
 .saturn_pos{
   position: absolute;
   z-index: 10;
-  left: 50%;
-  right: 2%;
+  left: 90%;
+  right: 20%;
+
 }
 .uranus_pos{
   position: absolute;
@@ -237,9 +249,14 @@ padding: 1%
   background: "transparent";
 }
 
-@media (max-width: 576px) {
+.picforpho_story{
+  margin: 0 auto;
+  margin-right: 0px;
+}
+
+@media (max-width: 720px) {
 .picforpho{
-  width: 80vw;
+  width: 75vw;
   height: 95%;
 }
 .picforpho_story{
@@ -267,4 +284,17 @@ padding: 1%
     margin-top:20%;
   }
   
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+@media (min-width: 1200px) {
+  .container{
+      max-width: 1200px;
+  }
 }

@@ -16,7 +16,7 @@ import MainSpace from './components/MainSpace';
 import Team from './components/Team';
 import  Events from './components/Events';
 import  Moments from './components/Moments';
-import Contact from './components/Contact';
+import Where from './components/Where';
 
 /*We'll see about you
 import Auth from './components/Auth';
@@ -72,10 +72,6 @@ export default class App extends Component{
             <MainNavigator />
               <Switch>
                 <Route exact strict path='/' component={MainSpace} />
-                <Route exact strict path='/team' component={Team} />
-                <Route exact strict path='/events' component={Events} />
-                <Route exact strict path='/moments' component={Moments} />
-                <Route exact strict path='/contact' component={Contact} />
               </Switch>
             </div>
           </BrowserRouter>

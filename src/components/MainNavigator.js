@@ -7,7 +7,6 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 */
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 import React, { Component }  from 'react';
-import {NavLink as RRNavLink} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -17,8 +16,9 @@ import {
   NavItem,
   NavLink,
    } from 'reactstrap';
+   
 
-  import "../basics.css";
+import "../basics.css";
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 class MainNavigator extends Component{
   constructor(props) {
@@ -37,10 +37,9 @@ toggle() {
 // ------------------ '(◣_◢)' ------------------
 render() {
   return (
-    <div className="cream-back">
- 
-
-      <Navbar color="transparent" light fluid justify expand="md">
+    <div className="row cream-back" >
+    
+      <Navbar color="transparent" light justify expand="md" style={{marginLeft: "30px"}}>
       <NavbarBrand href="#home">
       <img
         src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
@@ -48,29 +47,17 @@ render() {
         height="50"
         className="d-inline-block align-top"
         alt="Logo"
-      />
+        style={{ display: "block", margin: "0"}}  />
     </NavbarBrand>
-        <NavbarBrand className="" tag={RRNavLink} exact to="/" style={{color:"#ffb833", fontSize:"42px", marginLeft: "0px"}}>Ashvattha</NavbarBrand>
-        <NavbarToggler light onClick={this.toggle} />
+        <NavbarBrand className="" exact to="/" style={{color:"#ffb833", fontSize:"42px", outline:"none", textAlign:"center"}}>Ashvattha</NavbarBrand>
+        
+        <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={!this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink tag={RRNavLink} exact to="/team" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Team</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} exact to="/events" style={{color:"#333333", fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none',outline:"none"}}>Events</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} exact to="/moments" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Moments</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} exact to="/contact" style={{color:"#333333",fontSize:"17px", paddingRight: "72px"}} activeStyle={{backgroundColor: '#2e2f31', textDecoration: 'none', outline:"none"}}>Contact</NavLink>
-              </NavItem>
-            </Nav>
+          
         </Collapse>
       </Navbar>
-     
     </div>
+
   );
 }
 // ------------------ '(◣_◢)' ------------------
