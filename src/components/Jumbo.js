@@ -24,7 +24,7 @@ const styles = () => ({
   yellow:{
     borderRadius: "0px",
     marginRight: "12px",
-
+    outline: "none",
     color: "#333333",
     backgroundColor: '#ffb833',
     fontFamily: "Quicksand",
@@ -34,7 +34,7 @@ const styles = () => ({
   },
   transparent:{
     borderRadius: "0px",
-
+    outline: "none",
     color: "#333333",
     backgroundColor: 'transparent',
     fontFamily: "Quicksand",
@@ -42,6 +42,11 @@ const styles = () => ({
     '&:hover': {
       backgroundColor: '#ffb833',
     },
+    '&:focus': {
+      color: '#ef8354',
+      outline: "none",
+
+    }
   }
 });
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------

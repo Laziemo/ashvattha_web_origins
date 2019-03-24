@@ -52966,6 +52966,7 @@ var styles = function styles() {
     yellow: {
       borderRadius: "0px",
       marginRight: "12px",
+      outline: "none",
       color: "#333333",
       backgroundColor: '#ffb833',
       fontFamily: "Quicksand",
@@ -52975,11 +52976,16 @@ var styles = function styles() {
     },
     transparent: {
       borderRadius: "0px",
+      outline: "none",
       color: "#333333",
       backgroundColor: 'transparent',
       fontFamily: "Quicksand",
       '&:hover': {
         backgroundColor: '#ffb833'
+      },
+      '&:focus': {
+        color: '#ef8354',
+        outline: "none"
       }
     }
   };
@@ -77928,7 +77934,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33793" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
