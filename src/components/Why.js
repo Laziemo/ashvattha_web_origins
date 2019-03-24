@@ -20,7 +20,7 @@ import STAR1 from '../assets/04/star1.png';
 import GIRLIE from '../assets/04/girlie.png';
 
 import GALLERY_COVER from '../data/galleryIntro';
-import TESTIMONIAL from '../data/testimonials';
+import TESTIMONIALS from '../data/testimonials';
 
 class Why extends Component {
 // ------------------ '(◣_◢)' ------------------
@@ -29,39 +29,76 @@ class Why extends Component {
         super(props, context);
     
         this.handleSelect = this.handleSelect.bind(this);
-    
+        this.handleImageClick = this.handleImageClick.bind(this);
+        this.renderCarouselItem = this.renderCarouselItem.bind(this);
+        this.handleButton = this.handleButton.bind(this);
+
         this.state = {
             index: GALLERY_COVER[0].index,
             title: GALLERY_COVER[0].title,
             sub: GALLERY_COVER[0].sub,
             direction: null,
-            section: "gallery"
+            gallery: true
         };
       }
 // ------------------ '(◣_◢)' ------------------
     
     handleSelect(selectedIndex, e) {
-       
-        this.setState({
-            index:selectedIndex,
-            title:GALLERY_COVER[selectedIndex].title,
-            sub: GALLERY_COVER[selectedIndex].sub,
-            direction: e.direction,
-        });
+        if(this.state.gallery){
+            this.setState({
+                index:selectedIndex,
+                title:GALLERY_COVER[selectedIndex].title,
+                sub: GALLERY_COVER[selectedIndex].sub,
+                direction: e.direction,
+            });
+        }
+        else{
+            this.setState({
+                index:selectedIndex,
+                title:TESTIMONIALS[selectedIndex].title,
+                sub: TESTIMONIALS[selectedIndex].sub,
+                direction: e.direction,
+            });
+        }
+    }
+// ------------------ '(◣_◢)' ------------------
+    
+    handleImageClick(id) {
+       alert("One day, I will take you to a Gallery page. I promise!\nJust got image with id: ", id)
         
+    }
+    // ------------------ '(◣_◢)' ------------------
+    
+    handleButton(id) {
+        if(id===0){
+            this.setState({
+                index:GALLERY_COVER[0].index,
+                title:GALLERY_COVER[0].title,
+                sub: GALLERY_COVER[0].sub,
+                gallery: true
+            });
+        }
+        else{
+            this.setState({
+                index:TESTIMONIALS[0].index,
+                title:TESTIMONIALS[0].title,
+                sub: TESTIMONIALS[0].sub,
+                gallery: false
+            });
+        }     
     }
 // ------------------ '(◣_◢)' ------------------
 
-    renderCarouselItem(section){
-        if(section==="gallery"){
-            console.log("entered",  section)
+    renderCarouselItem(){
+        if(this.state.gallery){
 
             GALLERY_COVER.map((cover)=>{
                 console.log("entered",  section)
 
                 return (
-                    <Carousel.Item>
+                    <Carousel.Item key={cover.index}>
                     <img
+                        
                         className="d-block w-100"
                         src={cover.img}
                         alt={cover.title}
@@ -72,7 +109,7 @@ class Why extends Component {
                 );
             })
         }
-        if(section==="testimonial"){
+        else{
             TESTIMONIALS.map((testimonial)=>{
                 return (
                     <Carousel.Item>
@@ -92,9 +129,7 @@ class Why extends Component {
 // ------------------ '(◣_◢)' ------------------
 
     render() {
-        const { index, direction, title, sub, section } = this.state;
-        console.log(section)
-
+        const { index, direction, title, sub, gallery } = this.state;
 
         return (
             <div className="container-fluid black-back " >
@@ -126,26 +161,48 @@ class Why extends Component {
                         activeIndex={index}
                         direction={direction}
                         onSelect={this.handleSelect}
-                        fade={true}
+                        
+                        controls={true}
+                        wrap={true}
                         indicators={true}
                         slide={true}
+                        interval={10000}
                     >
+
                     {
-                         GALLERY_COVER.map((cover)=>{
-            
+                    (gallery)?
+                       (GALLERY_COVER.map((cover)=>{
+                            
                             return (
-                                <Carousel.Item>
+                                <Carousel.Item key={cover.index} 
+                                onClick={()=>this.handleImageClick(cover.id)}>
                                 <img
                                     className="d-block w-100"
                                     src={cover.img}
                                     alt={cover.title}
                                     style={{width:"360px",height:"480px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                    
                                 />
                             
                                 </Carousel.Item>
                             );
-                        })
+                        })) 
+                       :
+                       (TESTIMONIALS.map((testimonial)=>{
+                            return (
+                                <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={testimonial.img}
+                                    alt={testimonial.title}
+                                    style={{width:"360px",height:"480px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                />
+                            
+                                </Carousel.Item>
+                            );
+                        }))
                     }    
+                    
                     </Carousel>
 
                     <br />
@@ -167,9 +224,21 @@ class Why extends Component {
                         <div className="row" style={{marginTop:"2%"}}>
 
                             <div className=" ">
-                                <button type="button" className="btn btn--dark btn-lg yellow-back" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Gallery</button>
+                                <button type="button" 
+                              
+                                className="btn btn--dark btn-lg yellow-back" 
+                                style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}} 
+                                onClick={()=>{this.handleButton(0)}}
+                                >
+                                Gallery</button>
                                 
-                                <button type="button" className="btn btn--dark btn-lg blue-font" style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}}>Testimonials</button>
+                                <button type="button" 
+                               
+                                className="btn btn--dark btn-lg blue-font" 
+                                style={{padding:"10px", marginRight:"6px", borderRadius: "0px"}} 
+                                onClick={()=>{this.handleButton(1)}}
+                                >
+                                Testimonials</button>
                             </div>
                            
                         </div>

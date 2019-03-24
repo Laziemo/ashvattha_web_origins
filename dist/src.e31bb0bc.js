@@ -71356,17 +71356,17 @@ exports.default = void 0;
 var GALLERY_COVERS = [{
   index: 0,
   title: "Alice in Wonderland",
-  sub: "Check out pictures of the brats performing Lewis Caroll's classic!",
+  sub: "The brats performing Lewis Caroll's classic!",
   img: "http://www.caps.media/195/1-alice-in-wonderland/full/alice-in-wonderland-disneyscreencaps.com-71.jpg"
 }, {
   index: 1,
   title: "Hamlet",
-  sub: "Check out pictures of the brats being tormented by Shakespeare's classic!",
+  sub: "Paavam little ones being tormented by Shakespeare's classic! Paapam :(",
   img: "http://fettleanimation.com/wp-content/uploads/2016/02/Hamlet-Shakespeare-in-Shorts-1-%C2%A9Fettle-Animation.png"
 }, {
   index: 2,
   title: "Jungle Book",
-  sub: "Check out pictures of us all having fun performing Rudyard Kipling's classic!",
+  sub: "Us having fun performing Rudyard Kipling's classic!",
   img: "http://www.thehunchblog.com/wp-content/uploads/2014/06/The-Jungle-Book-2-2.jpg"
 }];
 var _default = GALLERY_COVERS;
@@ -71387,18 +71387,18 @@ exports.default = void 0;
 var TESTIMONIALS = [{
   index: 0,
   title: "Times of India",
-  sub: "Wow. We cannot believe how an old bat like Shyla is pulling off such a brilliant feat! Great Work!",
+  sub: "\"Wow! We cannot believe how an old bat like Shyla is pulling off such a brilliant feat! Inspiring work!\"",
   img: "https://static.mmo-champion.com/mmoc/images/news/2009/august/Volcano.jpg"
 }, {
   index: 1,
   title: "APJ Abdul Kalam",
-  sub: "The kids love Ashvattha. I love the kids. Therefore, I love Ashvattha.",
-  img: "https://s3.amazonaws.com/american-rivers-website/wp-content/uploads/2016/11/18133211/CA-San-Joaquin-River_cred_jcookfisher.jpg"
+  sub: "\"The kids love Ashvattha. I love the kids. Therefore, I love Ashvattha.\"",
+  img: "http://kanglaonline.com/wp-content/uploads/2015/07/kalam-tribute.jpg"
 }, {
   index: 2,
   title: "Vishal Menon",
-  sub: "Oh, the torture! Almost as beautiful as a Shakespearean tragedy. Finest tormentation I have experienced in India",
-  img: "http://www.thehunchblog.com/wp-content/uploads/2014/06/The-Jungle-Book-2-2.jpg"
+  sub: "\"Oh, the torture! Almost as beautiful as a Shakespearean tragedy. Finest tormentation I have witnessed in India!\"",
+  img: "http://1.bp.blogspot.com/-Qkv5KaThCHg/T7F5dMTxEcI/AAAAAAAAPi4/sBvkNE9sDVs/s1600/WhatTeachersDo.jpg"
 }];
 var _default = TESTIMONIALS;
 exports.default = _default;
@@ -71469,12 +71469,15 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Why).call(this, props, context));
     _this.handleSelect = _this.handleSelect.bind(_assertThisInitialized(_this));
+    _this.handleImageClick = _this.handleImageClick.bind(_assertThisInitialized(_this));
+    _this.renderCarouselItem = _this.renderCarouselItem.bind(_assertThisInitialized(_this));
+    _this.handleButton = _this.handleButton.bind(_assertThisInitialized(_this));
     _this.state = {
       index: _galleryIntro.default[0].index,
       title: _galleryIntro.default[0].title,
       sub: _galleryIntro.default[0].sub,
       direction: null,
-      section: "gallery"
+      gallery: true
     };
     return _this;
   } // ------------------ '(◣_◢)' ------------------
@@ -71483,23 +71486,58 @@ function (_Component) {
   _createClass(Why, [{
     key: "handleSelect",
     value: function handleSelect(selectedIndex, e) {
-      this.setState({
-        index: selectedIndex,
-        title: _galleryIntro.default[selectedIndex].title,
-        sub: _galleryIntro.default[selectedIndex].sub,
-        direction: e.direction
-      });
+      if (this.state.gallery) {
+        this.setState({
+          index: selectedIndex,
+          title: _galleryIntro.default[selectedIndex].title,
+          sub: _galleryIntro.default[selectedIndex].sub,
+          direction: e.direction
+        });
+      } else {
+        this.setState({
+          index: selectedIndex,
+          title: _testimonials.default[selectedIndex].title,
+          sub: _testimonials.default[selectedIndex].sub,
+          direction: e.direction
+        });
+      }
+    } // ------------------ '(◣_◢)' ------------------
+
+  }, {
+    key: "handleImageClick",
+    value: function handleImageClick(id) {
+      alert("One day, I will take you to a Gallery page. I promise!\nJust got image with id: ", id);
+    } // ------------------ '(◣_◢)' ------------------
+
+  }, {
+    key: "handleButton",
+    value: function handleButton(id) {
+      if (id === 0) {
+        this.setState({
+          index: _galleryIntro.default[0].index,
+          title: _galleryIntro.default[0].title,
+          sub: _galleryIntro.default[0].sub,
+          gallery: true
+        });
+      } else {
+        this.setState({
+          index: _testimonials.default[0].index,
+          title: _testimonials.default[0].title,
+          sub: _testimonials.default[0].sub,
+          gallery: false
+        });
+      }
     } // ------------------ '(◣_◢)' ------------------
 
   }, {
     key: "renderCarouselItem",
-    value: function renderCarouselItem(section) {
-      if (section === "gallery") {
-        console.log("entered", section);
-
+    value: function renderCarouselItem() {
+      if (this.state.gallery) {
         _galleryIntro.default.map(function (cover) {
           console.log("entered", section);
-          return _react.default.createElement(_reactBootstrap.Carousel.Item, null, _react.default.createElement("img", {
+          return _react.default.createElement(_reactBootstrap.Carousel.Item, {
+            key: cover.index
+          }, _react.default.createElement("img", {
             className: "d-block w-100",
             src: cover.img,
             alt: cover.title,
@@ -71513,10 +71551,8 @@ function (_Component) {
             }
           }));
         });
-      }
-
-      if (section === "testimonial") {
-        TESTIMONIALS.map(function (testimonial) {
+      } else {
+        _testimonials.default.map(function (testimonial) {
           return _react.default.createElement(_reactBootstrap.Carousel.Item, null, _react.default.createElement("img", {
             className: "d-block w-100",
             src: testimonial.img,
@@ -71537,13 +71573,14 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state = this.state,
           index = _this$state.index,
           direction = _this$state.direction,
           title = _this$state.title,
           sub = _this$state.sub,
-          section = _this$state.section;
-      console.log(section);
+          gallery = _this$state.gallery;
       return _react.default.createElement("div", {
         className: "container-fluid black-back "
       }, _react.default.createElement("img", {
@@ -71584,14 +71621,35 @@ function (_Component) {
         activeIndex: index,
         direction: direction,
         onSelect: this.handleSelect,
-        fade: true,
+        controls: true,
+        wrap: true,
         indicators: true,
-        slide: true
-      }, _galleryIntro.default.map(function (cover) {
-        return _react.default.createElement(_reactBootstrap.Carousel.Item, null, _react.default.createElement("img", {
+        slide: true,
+        interval: 10000
+      }, gallery ? _galleryIntro.default.map(function (cover) {
+        return _react.default.createElement(_reactBootstrap.Carousel.Item, {
+          key: cover.index,
+          onClick: function onClick() {
+            return _this2.handleImageClick(cover.id);
+          }
+        }, _react.default.createElement("img", {
           className: "d-block w-100",
           src: cover.img,
           alt: cover.title,
+          style: {
+            width: "360px",
+            height: "480px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            border: "3px solid black"
+          }
+        }));
+      }) : _testimonials.default.map(function (testimonial) {
+        return _react.default.createElement(_reactBootstrap.Carousel.Item, null, _react.default.createElement("img", {
+          className: "d-block w-100",
+          src: testimonial.img,
+          alt: testimonial.title,
           style: {
             width: "360px",
             height: "480px",
@@ -71634,6 +71692,9 @@ function (_Component) {
           padding: "10px",
           marginRight: "6px",
           borderRadius: "0px"
+        },
+        onClick: function onClick() {
+          _this2.handleButton(0);
         }
       }, "Gallery"), _react.default.createElement("button", {
         type: "button",
@@ -71642,6 +71703,9 @@ function (_Component) {
           padding: "10px",
           marginRight: "6px",
           borderRadius: "0px"
+        },
+        onClick: function onClick() {
+          _this2.handleButton(1);
         }
       }, "Testimonials"))))), _react.default.createElement("br", null), _react.default.createElement("br", null));
     }
@@ -77934,7 +77998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33793" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37637" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
