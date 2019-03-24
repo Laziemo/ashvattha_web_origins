@@ -26,8 +26,8 @@ class About extends Component {
                 <div className="row" style={{}}>
                     <div className="col " style={{maxWidth: "850px",marginTop:"128px"}}>
                         <p className="black-font ">If at first you dont succeed,  call it version 0.1.0. Chuck Norris can lift up a chair with one hand... While he's sitting on it! Ipsum something lorem smiling lake within reach. Beautiful feels.</p>
-                        <p className="black-font ">Few more shpeals just to fill in the deals. Working for meals. Almost at version 0.1.3. Add one more line kthnksbye. </p>
-                        <p className="black-font ">aand a little bit more just to nail the point home. About should not get longer than all  this.</p>
+                        <p className="black-font ">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
+                        <p className="black-font ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 
                     </div>
                 

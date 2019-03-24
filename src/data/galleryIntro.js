@@ -15,7 +15,7 @@ const GALLERY_COVERS = [
     {
         index: 1,
         title: "Hamlet",
-        sub: "Paavam little ones being tormented by Shakespeare's classic! Paapam :(",
+        sub: "A heavy experience of Shakespearean torture. The kids were strong and made it through!",
         img: "http://fettleanimation.com/wp-content/uploads/2016/02/Hamlet-Shakespeare-in-Shorts-1-%C2%A9Fettle-Animation.png"
     },
     {

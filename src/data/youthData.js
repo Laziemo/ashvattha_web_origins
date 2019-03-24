@@ -13,14 +13,14 @@ const YOUTH_DATA = [
     title: "Theatre Workshop",
     img: THEATRE,
     sub: "",
-    content: "Kids being bored to death with tales and legends of fictional creatures. For stories about real living legends, contact Shyla's husband - The Gopi.",
+    content: "Kids being tortured and ashamed in front of their parents is what this is all about!",
     alt: "Theatre"
     },
     {
     title: "Story Telling",
     img: STORY,
     sub: "",
-    content: "Kids being tortured and ashamed in front of their parents is what this is all about.",
+    content: "Kids being bored to death with tales and legends of fictional creatures. For stories about real living legends, contact Shyla's husband - The GoBee",
     alt: "Stories"
     },
     {

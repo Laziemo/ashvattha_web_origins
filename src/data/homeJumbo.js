@@ -5,8 +5,8 @@
 */
 
 const HOME_JUMBO = {
-  title: "Your dinner vs. You're dinner",
-  sub: "Intensive English Grammar Training ",
+  title: "Intensive English Grammar",
+  sub: "For Grade 8 and above.",
   sub0: "April 1st-19th, 2019",
   button0: "More Details »",
   button1: "Contact »",

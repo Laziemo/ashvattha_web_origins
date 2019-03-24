@@ -14,20 +14,20 @@ const PRO_DATA = [
     img: THEATRE,
     sub: "",
     content: "General communication in a business environment.",
-    alt: "Theatre"
+    alt: "Communication"
     },
     {
     title: "Business Etiquette",
     img: STORY,
     sub: "",
     content: "Being proper about it.",
-    alt: "Stories"
+    alt: "BusinessEtiquette"
     },
     {
     title: "Trinity",
     img: TRINITY,
     sub: "",
-    content: "General Trinity certified training.",
+    content: "General Trinity certified english training. ",
     alt: "Trinity"
     }
 ];

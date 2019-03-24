@@ -69927,9 +69927,9 @@ function (_Component) {
           className: "black-font "
         }, "If at first you dont succeed,  call it version 0.1.0. Chuck Norris can lift up a chair with one hand... While he's sitting on it! Ipsum something lorem smiling lake within reach. Beautiful feels."), _react.default.createElement("p", {
           className: "black-font "
-        }, "Few more shpeals just to fill in the deals. Working for meals. Almost at version 0.1.3. Add one more line kthnksbye. "), _react.default.createElement("p", {
+        }, "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. "), _react.default.createElement("p", {
           className: "black-font "
-        }, "aand a little bit more just to nail the point home. About should not get longer than all  this.")), _react.default.createElement("div", {
+        }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.")), _react.default.createElement("div", {
           className: "col-lg-4  col_centered "
         }, _react.default.createElement("img", {
           className: "picforpho_story",
@@ -70705,13 +70705,13 @@ var YOUTH_DATA = [{
   title: "Theatre Workshop",
   img: _theatre.default,
   sub: "",
-  content: "Kids being bored to death with tales and legends of fictional creatures. For stories about real living legends, contact Shyla's husband - The Gopi.",
+  content: "Kids being tortured and ashamed in front of their parents is what this is all about!",
   alt: "Theatre"
 }, {
   title: "Story Telling",
   img: _storytelling.default,
   sub: "",
-  content: "Kids being tortured and ashamed in front of their parents is what this is all about.",
+  content: "Kids being bored to death with tales and legends of fictional creatures. For stories about real living legends, contact Shyla's husband - The GoBee",
   alt: "Stories"
 }, {
   title: "Trinity",
@@ -70864,18 +70864,18 @@ var PRO_DATA = [{
   img: _theatre.default,
   sub: "",
   content: "General communication in a business environment.",
-  alt: "Theatre"
+  alt: "Communication"
 }, {
   title: "Business Etiquette",
   img: _storytelling.default,
   sub: "",
   content: "Being proper about it.",
-  alt: "Stories"
+  alt: "BusinessEtiquette"
 }, {
   title: "Trinity",
   img: _trinity.default,
   sub: "",
-  content: "General Trinity certified training.",
+  content: "General Trinity certified english training. ",
   alt: "Trinity"
 }];
 var _default = PRO_DATA;
@@ -71361,7 +71361,7 @@ var GALLERY_COVERS = [{
 }, {
   index: 1,
   title: "Hamlet",
-  sub: "Paavam little ones being tormented by Shakespeare's classic! Paapam :(",
+  sub: "A heavy experience of Shakespearean torture. The kids were strong and made it through!",
   img: "http://fettleanimation.com/wp-content/uploads/2016/02/Hamlet-Shakespeare-in-Shorts-1-%C2%A9Fettle-Animation.png"
 }, {
   index: 2,
@@ -71957,8 +71957,8 @@ exports.default = void 0;
      
 */
 var HOME_JUMBO = {
-  title: "Your dinner vs. You're dinner",
-  sub: "Intensive English Grammar Training ",
+  title: "Intensive English Grammar",
+  sub: "For Grade 8 and above.",
   sub0: "April 1st-19th, 2019",
   button0: "More Details »",
   button1: "Contact »",
@@ -77998,7 +77998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37637" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38101" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
