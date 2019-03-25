@@ -91,7 +91,7 @@ class Jumbo extends Component{
 
 
                   <div className="col" style={{marginLeft:"0px"}}>
-
+                  <div className="container-fluid">
                     <div className="row margin_adjust">
                       <h1 className="yellow-font ">{this.props.data.title}</h1>
                     </div>
@@ -123,6 +123,7 @@ class Jumbo extends Component{
                           Get Brochure
                         </Button>
                     </div>
+                  </div>
                   </div>
                     
                 </div>

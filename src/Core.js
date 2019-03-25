@@ -13,8 +13,6 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 */
 import MainNavigator from './components/MainNavigator';
 import MainSpace from './components/MainSpace';
-import Gallery from './components/Gallery';
-import Where from './components/Where';
 
 
 /*We'll see about you
@@ -71,9 +69,7 @@ export default class App extends Component{
             <MainNavigator />
               <Switch>
                 <Route exact strict path='/' component={MainSpace} />
-                <Route exact strict path='/gallery' component={Gallery} />
-                <Route exact strict path='/contact' component={Where} />
-
+    
               </Switch>
             </div>
           </BrowserRouter>

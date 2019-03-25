@@ -16,22 +16,14 @@ import Tab from '@material-ui/core/Tab';
 
 import { transparent } from 'material-ui/styles/colors';
  
-import MOON from '../assets/04/moon.png';
-import MERCURY from '../assets/04/mercury.png';
-import VENUS from '../assets/04/venus.png';
-import SATURN from '../assets/04/saturn.png';
-import URANUS from '../assets/04/uranus.png';
-import STAR0 from '../assets/04/star0.png';
-import STAR1 from '../assets/04/star1.png';
-import GIRLIE from '../assets/04/girlie.png';
 //import all album data here:
 import GALLERY_COVER from '../data/galleryIntro';
+import TESTIMONIALS from '../data/testimonials';
+
 import HAMLET_ALBUM from '../data/hamletAlbum';
 import ALICE_ALBUM from '../data/aliceAlbum';
 import JUNGLE_BOOK_ALBUM from '../data/jungleBookAlbum';
-
 import HOSPIRA_ALBUM from '../data/hospiraAlbum';
-import TESTIMONIALS from '../data/testimonials';
 
 import request from 'request';
 import { EditorBorderAll } from 'material-ui/svg-icons';
@@ -51,6 +43,7 @@ const styles = theme => ({
     root: {
       flexGrow: 1,
       backgroundColor: transparent,
+
   
     },
     tabsRoot: {
@@ -250,7 +243,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={cover.img}
                                 alt={cover.title}
-                                style={{width:"360px",height:"480px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                                 
                             />
                         
@@ -268,7 +261,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={testimonial.img}
                                 alt={testimonial.title}
-                                style={{width:"360px",height:"480px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                             />
                         
                             </Carousel.Item>
@@ -288,7 +281,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"480px",
+                                    height:"512px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -314,7 +307,7 @@ class Gallery extends Component {
                             src={photo.img}
                             alt={photo.title}
                             style={{width:"360px",
-                                height:"480px",
+                                height:"512px",
                                 display: "flex", 
                                 alignItems: "center",
                                 justifyContent:"center", 
@@ -340,7 +333,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"480px",
+                                    height:"5120px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -366,7 +359,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"480px",
+                                    height:"512px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -391,7 +384,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={cover.img}
                                 alt={cover.title}
-                                style={{width:"360px",height:"480px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                                 
                             />
                         
@@ -410,15 +403,9 @@ class Gallery extends Component {
         return (
             <div className="container-fluid black-back " >
                 
-                <img className="moon_pos" src={MOON}></img>
-                <img className="mercury_pos" src={MERCURY}></img>
-                <img className="saturn_pos" src={SATURN}></img>
-                <img className="star0_pos" src={STAR0}></img>
-                <img className="star1_pos" src={STAR1}></img>
                 <br />
-                <br />
-                <div className="row">
-                    <div className="col" style={{marginLeft:"15px"}}>
+                <div className="container-fluid">
+                    
                     <Tabs
                         value={value}
                         onChange={this.handleTab}
@@ -440,7 +427,7 @@ class Gallery extends Component {
                         />
                     </Tabs>
                         
-                    </div>
+                
                 </div>
                 
                 <br />
@@ -448,7 +435,7 @@ class Gallery extends Component {
                 <hr />
                 
                 <div className="row ">
-                    <div className="col-sm-6  " style={{marginLeft:"0px"}}>
+                    <div className="col-sm-6 col-md-6 col-lg-7" style={{marginLeft:"0px"}}>
 
                     <Carousel
                         activeIndex={index}

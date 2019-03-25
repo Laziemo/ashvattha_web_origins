@@ -41,60 +41,32 @@ render() {
   return (
     <div className="container-fluid cream-back" >
     
-      <Navbar color="faded" light expand="md">
-        
-        <NavbarBrand tag={RRNavLink} exact to="/" style={{color:"#f7f7f2", fontSize:"35px"}}>
-        <img
-          src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
-          width="50"
-          height="50"
-          className="d-inline-block align-top"
-          alt="Logo" />
-        </NavbarBrand>
-        <NavbarBrand className="brand" 
-          exact to="/" 
-          style={{color:"#ffb833", fontSize:"42px", outline:"none", textAlign:"center"}}
-          >Ashvattha
-        </NavbarBrand>
-        
-        <NavbarToggler onClick={this.toggle} className="mr-2" />
+      <div className = "row">
+        <Navbar color="faded" light expand="md">
+          
+          <NavbarBrand tag={RRNavLink} exact to="/" style={{color:"#f7f7f2", fontSize:"42px"}}>
+          <img
+            src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
+            width="50"
+            height="50"
+            className="d-inline-block align-top"
+            alt="Logo" />
+          </NavbarBrand>
+          <NavbarBrand className="brand" 
+            exact to="/" 
+            style={{color:"#ffb833", fontSize:"54px", outline:"none", textAlign:"center"}}
+            >Ashvattha
+          </NavbarBrand>
+          
+          <NavbarToggler onClick={this.toggle} className="mr-2" />
 
-        <Collapse isOpen={!this.state.isOpen} navbar>
-        <Nav className="outline"
-         navbar
-         style={{marginLeft: "70%"}}
-         >
-          <NavItem >
-            <NavLink 
-              tag={RRNavLink} 
-              exact to="/" 
-              style={{color:"#333333",fontSize:"17px"}} 
-              activeStyle={{ color: "#ffb833", outline:"none"}}
-            >Home
-            </NavLink>   
-          </NavItem>
-          <NavItem >
-            <NavLink 
-              tag={RRNavLink} 
-              exact to="/gallery" 
-              style={{color:"#333333",fontSize:"17px"}} 
-              activeStyle={{ color: "#ffb833", outline:"none"}}
-            >Gallery
-            </NavLink>   
-          </NavItem> 
-          <NavItem >
-            <NavLink 
-              tag={RRNavLink} 
-              exact to="/contact" 
-              style={{color:"#333333",fontSize:"17px"}} 
-              activeStyle={{ color: "#ffb833", outline:"none"}}
-            >Contact
-            </NavLink>   
-          </NavItem> 
-        </Nav>         
-        </Collapse>
+          <Collapse isOpen={!this.state.isOpen} navbar>
+            
+          </Collapse>
 
-      </Navbar>
+        </Navbar>
+      
+      </div>
 
     </div>
 

@@ -103,7 +103,7 @@ class Who extends Component{
     const { value } = this.state;
     console.log(this.state.value);
     return(
-      <div className="container white-back">
+      <div className="container-fluid white-back">
       <Spring
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
@@ -124,12 +124,14 @@ class Who extends Component{
           </Spring>
           <br />
           <br />
-          <div className="row">
-                <h2 className="blue-font"  style={{marginLeft: "36px"}}>Who?</h2>
+          <div className="container">
+                <h2 className="blue-font">Who?</h2>
           </div>
          
-          <div className="row " style={{fontSize: "27px"}}>
-          <div className={classes.root} style={{fontFamily:"Quicksand"}}  style={{marginLeft: "36px"}}>
+         <br />
+          <div className={classes.root} className="container" 
+          style={{fontSize: "27px",fontFamily:"Quicksand"}}
+          >
           <Tabs
             value={value}
             onChange={this.handleChange}
@@ -151,11 +153,10 @@ class Who extends Component{
             />
           </Tabs>
           </div>
-          </div>
 
         </div>
 
-        <div className="container-fluid">
+        <div className="container">
           {this.renderContent()}
         </div>
         
