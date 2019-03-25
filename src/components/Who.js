@@ -84,7 +84,7 @@ class Who extends Component{
       this.setState({value});
   }  
 // ------------------ '(◣_◢)' ------------------
-  renderContent(section){
+  renderContent(){
     if(this.state.value===0){
       return (
         <About />
@@ -101,7 +101,7 @@ class Who extends Component{
   render(){
     const { classes } = this.props;
     const { value } = this.state;
-
+    console.log(this.state.value);
     return(
       <div className="container white-back">
       <Spring
@@ -156,7 +156,7 @@ class Who extends Component{
         </div>
 
         <div className="container-fluid">
-          {this.renderContent(this.state.section)}
+          {this.renderContent()}
         </div>
         
       

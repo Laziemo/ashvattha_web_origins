@@ -23,7 +23,14 @@ const GALLERY_COVERS = [
         title: "Jungle Book",
         sub: "Us having fun performing Rudyard Kipling's classic!",
         img: "http://www.thehunchblog.com/wp-content/uploads/2014/06/The-Jungle-Book-2-2.jpg"
+    },
+    {
+        index: 3,
+        title: "Hospira",
+        sub: "The Hospira Team",
+        img: "https://www.pfizermed.de/fileadmin/pfizermed.de/images/Hospira_logo_Vector_wht.jpg"
     }
+
 ];
 
   export default  GALLERY_COVERS;

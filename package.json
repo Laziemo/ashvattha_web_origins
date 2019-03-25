@@ -1,6 +1,6 @@
 {
   "name": "ashvattha_web_origins",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "Ashvattha Web Origins",
   "main": "index.js",
   "scripts": {
@@ -18,21 +18,21 @@
   "author": "lm0",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@material-ui/core": "^3.9.2",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "live-server": "^1.2.1",
     "material-ui": "^0.20.2",
-    "parcel-bundler": "^1.11.0",
+    "parcel-bundler": "^1.12.3",
     "perfect-scrollbar": "^1.4.0",
     "prop-types": "^15.7.2",
     "rc-scroll-anim": "^2.5.6",
-    "react": "^16.8.4",
+    "react": "^16.8.5",
     "react-animate-on-scroll": "^2.1.5",
-    "react-bootstrap": "^1.0.0-beta.5",
-    "react-dom": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.5",
     "react-redux": "^6.0.1",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
@@ -46,9 +46,9 @@
     "redux-thunk": "^2.3.0",
     "request": "^2.88.0",
     "sha256": "^0.2.0",
-    "webpack": "^4.29.5"
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3"
+    "@babel/core": "^7.4.0"
   }
 }

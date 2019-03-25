@@ -13,10 +13,9 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 */
 import MainNavigator from './components/MainNavigator';
 import MainSpace from './components/MainSpace';
-import Team from './components/Team';
-import  Events from './components/Events';
-import  Moments from './components/Moments';
+import Gallery from './components/Gallery';
 import Where from './components/Where';
+
 
 /*We'll see about you
 import Auth from './components/Auth';
@@ -72,6 +71,9 @@ export default class App extends Component{
             <MainNavigator />
               <Switch>
                 <Route exact strict path='/' component={MainSpace} />
+                <Route exact strict path='/gallery' component={Gallery} />
+                <Route exact strict path='/contact' component={Where} />
+
               </Switch>
             </div>
           </BrowserRouter>
