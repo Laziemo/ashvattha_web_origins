@@ -52,7 +52,7 @@ render() {
 
           <NavbarBrand tag={RRNavLink} 
           exact to="/" 
-          style={{color:"#f7f7f2", fontSize:"42px"}}>
+          style={{color:"#f7f7f2", fontSize:"36px"}}>
           <img
             src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
             width="50"
@@ -63,12 +63,12 @@ render() {
           </NavbarBrand>
           <NavbarBrand className="brand" 
             exact to="/" 
-            style={{color:"#ffb833", fontSize:"49px", outline:"none", textAlign:"center"}}
+            style={{color:"#ffb833", fontSize:"36px", outline:"none", textAlign:"center"}}
             >Ashvattha
           </NavbarBrand>
 
           </div>
-          <div className="col" style={{fontSize: "22px"}}>
+          <div className="col" style={{fontSize: "21px"}}>
 
           <NavbarToggler onClick={this.toggle} className="mr-2" style={{marginRight: "10px"}}/>
 
