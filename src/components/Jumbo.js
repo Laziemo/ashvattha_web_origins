@@ -77,6 +77,11 @@ class Jumbo extends Component{
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <hr />
+      <hr />
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}

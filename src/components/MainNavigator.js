@@ -9,6 +9,7 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 import React, { Component }  from 'react';
 import {NavLink as RRNavLink} from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
+import logo from '../assets/logo.png';
 
 import {
   Collapse,
@@ -44,33 +45,34 @@ scrollToTop = () => {
 // ------------------ '(◣_◢)' ------------------
 render() {
   return (
-        <Navbar color="dark" light fixed="top" expand="md" >
-          <div className="col" style={{minWidth:"420px"}}>
+        <div className="container">
+        <Navbar color="dark" dark fixed="top" expand="md">
+          
+          <div className="col-sm-2 col-md-5 col-lg-3 ">
 
           <NavbarBrand tag={RRNavLink} 
           exact to="/" 
-          style={{fontSize:"36px"}}>
+          >
           <img
-            src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
-            width="50"
-            height="50"
+            className='logo'
+            width="287"
+            height="100"
+            src={logo}
             onClick={()=>this.scrollToTop()}
-            className="d-inline-block align-top"
+            className="d-inline-block align-top "
             alt="Logo" />
-          </NavbarBrand>
-          <NavbarBrand className="brand" 
-            exact to="/" 
-            style={{color:"#ffb833", fontSize:"36px", outline:"none", textAlign:"center"}}
-            >Ashvattha
           </NavbarBrand>
 
           </div>
-          <div className="col cream-font" style={{fontSize: "21px"}}>
+          <div className="col-sm-2 col-md-1 col-lg-3 cream-font ">
+          </div>
 
-          <NavbarToggler onClick={this.toggle} className="mr-2" style={{marginRight: "10px"}}/>
+          <div className="col-sm-2 col-md-6 col-lg-6 cream-font " style={{fontSize: "21px"}}>
+
+          <NavbarToggler onClick={this.toggle} className="col-sm-2" style={{marginRight: "10px"}}/>
 
           <Collapse isOpen={!this.state.isOpen} navbar>
-          <div className="row" style={{padding: "20px", position: "absolute", right: '0'}}>
+          <div className="row">
             
             <div className="col menu-text"  style={{marginLeft: "55px"}}>
             <NavItem>
@@ -116,7 +118,7 @@ render() {
             </Link>
             </NavItem>
             </div>
-            
+
             <div className="col menu-text" style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
@@ -136,6 +138,7 @@ render() {
           </div>
 
         </Navbar>
+        </div>
       
       
 
