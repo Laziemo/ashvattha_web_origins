@@ -28,7 +28,6 @@ class MainSpace extends Component{
   render(){
     return(
       <div className="white-back ">
-        <hr />
         <Jumbo data={HOME_JUMBO} />
         <Who id="who"/>
         <What id="what"/>

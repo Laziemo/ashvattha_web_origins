@@ -46,9 +46,9 @@ scrollToTop = () => {
 render() {
   return (
         <div className="container">
-        <Navbar color="dark" dark fixed="top" expand="md">
+        <Navbar color="dark" light fixed="top" expand="md">
           
-          <div className="col-sm-2 col-md-5 col-lg-3 ">
+          <div className="col-sm-2 col-md-3 col-lg-2">
 
           <NavbarBrand tag={RRNavLink} 
           exact to="/" 
@@ -62,19 +62,19 @@ render() {
             className="d-inline-block align-top "
             alt="Logo" />
           </NavbarBrand>
-
           </div>
-          <div className="col-sm-2 col-md-1 col-lg-3 cream-font ">
+          
+          <div className="col-sm-2 col-md-3 col-lg-4 cream-font">
           </div>
 
-          <div className="col-sm-2 col-md-6 col-lg-6 cream-font " style={{fontSize: "21px"}}>
-
-          <NavbarToggler onClick={this.toggle} className="col-sm-2" style={{marginRight: "10px"}}/>
+          <div className="col-sm-2 col-md-6 col-lg-6 cream-font" 
+          style={{fontSize: "21px", padding:"20px"}}>
+          <div className="row ">
+          <NavbarToggler onClick={this.toggle} 
+          className="col-md-2"/>
 
           <Collapse isOpen={!this.state.isOpen} navbar>
-          <div className="row">
-            
-            <div className="col menu-text"  style={{marginLeft: "55px"}}>
+          <div className="col-md-3 menu-text">
             <NavItem>
             <Link
                 activeClass="active"
@@ -89,7 +89,7 @@ render() {
             </NavItem>
             </div>
 
-            <div className="col menu-text" style={{marginLeft: "55px"}}>
+            <div className="col-md-3 menu-text">
             <NavItem>
             <Link
                 activeClass="active"
@@ -104,7 +104,7 @@ render() {
             </NavItem>
             </div>
 
-            <div className="col menu-text" style={{marginLeft: "55px"}}>
+            <div className="col-md-3 menu-text">
             <NavItem>
             <Link
                 activeClass="active"
@@ -118,8 +118,8 @@ render() {
             </Link>
             </NavItem>
             </div>
+            <div className="col-md-3 menu-text">
 
-            <div className="col menu-text" style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
                 activeClass="active"
@@ -133,8 +133,9 @@ render() {
             </Link>
             </NavItem>
             </div>
-          </div>  
+          
           </Collapse>
+          </div>
           </div>
 
         </Navbar>

@@ -158,6 +158,7 @@ padding: 1%
   width: 48px;
   position: absolute;
   z-index: 10;
+  top: 40%;
 }
 .lstair{
   position: absolute;
@@ -205,8 +206,8 @@ padding: 1%
 .birdie_pos{
   position: absolute;
   z-index: 10;
-  left: 20%;
-  top: 20%;
+  left: 10%;
+  top: 30%;
   right: 20%;
 }
 

@@ -67,8 +67,7 @@ export default class App extends Component{
           <BrowserRouter history={browserHistory}>
             <div>
             <MainNavigator />
-            <hr />
-            <hr />
+            
 
               <Switch>
                 <Route exact strict path='/' component={MainSpace} />

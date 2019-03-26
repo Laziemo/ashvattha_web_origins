@@ -33,7 +33,9 @@ class Why extends Component {
     render() {
         const { id  } = this.props;
         return (
-            <div className="container-fluid black-back"  id={id} >
+            <div id={id}>
+            <br />
+            <div className="container-fluid black-back" >
                 <img className="moon_pos" src={MOON}></img>
                 <img className="mercury_pos" src={MERCURY}></img>
                 <img className="saturn_pos" src={SATURN}></img>
@@ -59,6 +61,7 @@ class Why extends Component {
                 <br />
                 <br />
     
+            </div>
             </div>
         );
     }

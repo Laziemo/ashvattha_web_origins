@@ -80,8 +80,9 @@ class Jumbo extends Component{
       <br />
       <br />
       <br />
-      <hr />
-      <hr />
+      <br />
+      <br />
+  
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}
@@ -146,10 +147,12 @@ class Jumbo extends Component{
                     
                 </div>
                 <br />
+                <br />
+                <br />
               </div>
               </div>
             </div>}
-      
+            
         </Spring>
       </div>
   

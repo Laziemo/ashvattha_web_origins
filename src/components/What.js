@@ -207,7 +207,10 @@ renderSection(to,from){
   render(){
     const { id } = this.props;
     return(
-      <div className="container-fluid" id={id}>
+      <div id={id}>
+      <br />
+      <br />
+      <div className="container-fluid" >
 
       <br />
   
@@ -226,8 +229,7 @@ renderSection(to,from){
         <br />            
         <br />
 
-  
-
+      </div>
       </div>
     );
   }
