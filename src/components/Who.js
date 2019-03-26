@@ -109,7 +109,7 @@ class Who extends Component{
     const { value } = this.state;
     console.log(this.state.value);
     return(
-      <div className="container-fluid white-back">
+      <div className="container-fluid white-back" id={id}>
       <Spring
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
@@ -133,7 +133,6 @@ class Who extends Component{
           <div 
             className="container" 
             ref={this.myRef}
-            id={id}
           >
                 <h2 className="blue-font">Who?</h2>
           </div>

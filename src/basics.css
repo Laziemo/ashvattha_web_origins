@@ -33,6 +33,9 @@ padding: 1%
 .white-font{
     color: #f7f7f2;
 }
+.cream-font{
+  color: #FCF6C2;
+}
 .red-font{
     color: #db5461;
 }
@@ -44,7 +47,7 @@ padding: 1%
     color: #4fb0c6;
 }
 .black-font{
-    color: #333333;
+    color: #343A40;
 }
 
 .white-back{
@@ -89,12 +92,12 @@ padding: 1%
 }
 
 .black-back{
-  background-color: #333333;
+  background-color: #343A40;
 }
 
 
 .zero{
-  background-color: #333333;
+  background-color: #343A40s;
 
 }
 .one{
@@ -211,14 +214,14 @@ padding: 1%
 .moon_pos{
   position: absolute;
   z-index: 10;
-  left: 50%;
+  left: 80%;
   right: 2%;
 }
 
 .mercury_pos{
   position: absolute;
   z-index: 10;
-  left: 5%;;
+  left: 0%;;
   right: 20%;
 }
 .venus_pos{
@@ -308,4 +311,18 @@ padding: 1%
   .container{
       max-width: 1200px;
   }
+}
+
+
+
+.box:hover { 
+  -moz-box-shadow: 0 0 10px #ccc; 
+  -webkit-box-shadow: 0 0 10px #ccc; 
+  box-shadow: 0 0 10px #ccc;
+  background-color: #006494;
+  opacity: 0.9;
+}
+
+.menu-text:hover { 
+ color: #ffb833;
 }

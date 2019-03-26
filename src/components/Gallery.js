@@ -180,23 +180,48 @@ class Gallery extends Component {
         console.log(id);
         switch(id){
             case 0:
-                this.setState({album: "alice"});
+                this.setState({
+                    index:0,
+                    title:ALICE_ALBUM[0].title,
+                    sub: ALICE_ALBUM[0].sub,
+                    album: "alice"
+                });
                 break;
             case 1:
             //BUILD: HAMLET_ALBUM_BUILT AND THEN SET_STATE FOR ReRENDER      
-                this.setState({album: "hamlet"});
+                this.setState({
+                    index:0,
+                    title:HAMLET_ALBUM[0].title,
+                    sub: HAMLET_ALBUM[0].sub,
+                    album: "hamlet"
+                });
                 break;
         
             case 2:
-                this.setState({album: "jungle_book"});
+                this.setState({
+                    index:0,
+                    title:JUNGLE_BOOK_ALBUM[0].title,
+                    sub: JUNGLE_BOOK_ALBUM[0].sub,
+                    album: "jungle_book"
+                });
                 break;
 
             case 3:
-                this.setState({album: "hospira"});
+                this.setState({
+                    index:0,
+                    title:HOSPIRA_ALBUM[0].title,
+                    sub: HOSPIRA_ALBUM[0].sub,
+                    album: "hospira"
+                });
                 break;
 
             default:
-                this.setState({album: "gallery"});
+                this.setState({
+                    index:0,
+                    title:GALLERY_COVER[0].title,
+                    sub: GALLERY_COVER[0].sub,
+                    album: "gallery",
+                });
                 break;
             
         }
@@ -303,7 +328,7 @@ class Gallery extends Component {
                     return (
                         <Carousel.Item  key={photo.index}>
                         <img
-                            className="d-block w-100"
+                            className="d-block w-100 "
                             src={photo.img}
                             alt={photo.title}
                             style={{width:"360px",
@@ -438,6 +463,7 @@ class Gallery extends Component {
                     <div className="col-sm-12 col-md-8 col-lg-7" style={{marginLeft:"0px"}}>
 
                     <Carousel
+                        className="box"
                         activeIndex={index}
                         direction={direction}
                         onSelect={this.handleSlide}
@@ -447,6 +473,7 @@ class Gallery extends Component {
                         indicators={true}
                         slide={true}
                         interval={10000}
+                        
                     >
 
                     {

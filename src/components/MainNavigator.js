@@ -44,15 +44,12 @@ scrollToTop = () => {
 // ------------------ '(◣_◢)' ------------------
 render() {
   return (
-    <div className="container-fluid  cream-back">
-    
-      <div className = "container-fluid cream-back ">
-        <Navbar color="faded" light fixed="top" expand="md">
+        <Navbar color="dark" light fixed="top" expand="md" >
           <div className="col" style={{minWidth:"420px"}}>
 
           <NavbarBrand tag={RRNavLink} 
           exact to="/" 
-          style={{color:"#f7f7f2", fontSize:"36px"}}>
+          style={{fontSize:"36px"}}>
           <img
             src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
             width="50"
@@ -68,13 +65,14 @@ render() {
           </NavbarBrand>
 
           </div>
-          <div className="col" style={{fontSize: "21px"}}>
+          <div className="col cream-font" style={{fontSize: "21px"}}>
 
           <NavbarToggler onClick={this.toggle} className="mr-2" style={{marginRight: "10px"}}/>
 
           <Collapse isOpen={!this.state.isOpen} navbar>
-          <div className="row " style={{padding: "20px", position: "absolute", right: '0'}}>
-            <div className="col "  style={{marginLeft: "55px"}}>
+          <div className="row" style={{padding: "20px", position: "absolute", right: '0'}}>
+            
+            <div className="col menu-text"  style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
                 activeClass="active"
@@ -88,7 +86,8 @@ render() {
             </Link>
             </NavItem>
             </div>
-            <div className="col" style={{marginLeft: "55px"}}>
+
+            <div className="col menu-text" style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
                 activeClass="active"
@@ -102,7 +101,8 @@ render() {
             </Link>
             </NavItem>
             </div>
-            <div className="col" style={{marginLeft: "55px"}}>
+
+            <div className="col menu-text" style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
                 activeClass="active"
@@ -116,7 +116,8 @@ render() {
             </Link>
             </NavItem>
             </div>
-            <div className="col" style={{marginLeft: "55px"}}>
+            
+            <div className="col menu-text" style={{marginLeft: "55px"}}>
             <NavItem>
             <Link
                 activeClass="active"
@@ -136,9 +137,7 @@ render() {
 
         </Navbar>
       
-      </div>
-
-    </div>
+      
 
   );
 }

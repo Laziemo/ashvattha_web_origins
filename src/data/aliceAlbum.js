@@ -8,7 +8,7 @@ const ALICE_ALBUM = [
 
                         title: "Alice",
 
-                        sub:"An example of our professional training sessions.",
+                        sub:"Our theatre performance of Alice in Wonderland",
 
                         img: pic0,
 
@@ -20,7 +20,7 @@ const ALICE_ALBUM = [
 
                         title: "Alice",
 
-                        sub:"An example of our professional training sessions.",
+                        sub:"Our theatre performance of Alice in Wonderland",
 
                         img: pic1,
 
@@ -32,7 +32,7 @@ const ALICE_ALBUM = [
 
                         title: "Alice",
 
-                        sub:"An example of our professional training sessions.",
+                        sub:"Our theatre performance of Alice in Wonderland",
 
                         img: pic2,
 
