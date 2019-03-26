@@ -14,6 +14,9 @@ import { Spring } from 'react-spring/renderprops'
 import LEAVES_BACK from '../assets/01/leaves_back.png';
 import BIRDIE from '../assets/01/birdie.png';
 import CHILLIN from '../assets/01/chillin_wolma.png';
+import LEAF from '../assets/final_complete/SVG/SS.svg';
+import LEAF1 from '../assets/final_complete/SVG/SE.svg';
+
 import "../basics.css";
 
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
@@ -84,17 +87,21 @@ class Jumbo extends Component{
 
               <div className = "container">
                 <div className= "row">
-
+                
                   <div className="col ">
                     <img className="picforpho" src={CHILLIN} alt="oldmachillin"></img>
                   </div>
+                 
+                      <img className="leaf1" src={LEAF1} alt="leaf"></img>
+                   
 
-
-                  <div className="col" style={{marginLeft:"0px"}}>
-                  <div className="container-fluid">
-                    <div className="row margin_adjust">
+                  <div className="col " style={{marginLeft:"0px"}}>
+                  
+                  <div className="container ">
+                    <div className="row margin_adjust ">
                       <h1 className="yellow-font ">{this.props.data.title}</h1>
                     </div>
+                    
                     <div className="row ">
                       <p className="blue-font ">{this.props.data.sub}</p>
                     </div>
@@ -124,6 +131,9 @@ class Jumbo extends Component{
                         </Button>
                     </div>
                   </div>
+                  <div className="col ">
+                      <img className="leaf0" src={LEAF} alt="leaf"></img>
+                    </div>
                   </div>
                     
                 </div>

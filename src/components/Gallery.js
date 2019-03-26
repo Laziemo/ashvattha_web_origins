@@ -418,7 +418,7 @@ class Gallery extends Component {
                         <Tab
                         
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-                        label="Events"
+                        label="Gallery"
                         />
                         <Tab
                         

@@ -141,9 +141,20 @@ padding: 1%
   padding: 0%;
 }
 
-.leaf{
-  height: 70px;
-  width: 70px;
+.leaf0{
+  height: 122px;
+  width: 152px;
+  position: absolute;
+  z-index: 1;
+  left: 27%;
+  top: 50%;
+  right: 20%;
+}
+.leaf1{
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  z-index: 10;
 }
 .lstair{
   position: absolute;
@@ -159,7 +170,7 @@ padding: 1%
 .leaves_back_pos{
   position: absolute;
   z-index: 1;
-  left: 27%;
+  left: 47%;
   top: 20%;
   right: 20%;
 }
@@ -167,8 +178,8 @@ padding: 1%
 .leaves_back_pos_0{
   position: absolute;
   z-index: 1;
-  left: 36%;
-  top: 92%;
+  left: 56%;
+  top: 130%;
   right: 10%;
 
 }

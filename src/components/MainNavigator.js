@@ -39,11 +39,12 @@ toggle() {
 // ------------------ '(◣_◢)' ------------------
 render() {
   return (
-    <div className="container-fluid cream-back" >
+    <div className="container-fluid  cream-back" >
     
-      <div className = "row">
+      <div className = "row ">
         <Navbar color="faded" light expand="md">
-          
+          <div className="col-sm-8 " style={{minWidth:"420px"}}>
+
           <NavbarBrand tag={RRNavLink} exact to="/" style={{color:"#f7f7f2", fontSize:"42px"}}>
           <img
             src="http://www.clker.com/cliparts/0/5/7/9/13419482801086160092Green%20Leaf.svg.hi.png"
@@ -54,15 +55,19 @@ render() {
           </NavbarBrand>
           <NavbarBrand className="brand" 
             exact to="/" 
-            style={{color:"#ffb833", fontSize:"54px", outline:"none", textAlign:"center"}}
+            style={{color:"#ffb833", fontSize:"49px", outline:"none", textAlign:"center"}}
             >Ashvattha
           </NavbarBrand>
-          
-          <NavbarToggler onClick={this.toggle} className="mr-2" />
+
+          </div>
+          <div className="col-sm-4 ">
+
+          <NavbarToggler onClick={this.toggle} className="mr-2" style={{marginRight: "10px"}}/>
 
           <Collapse isOpen={!this.state.isOpen} navbar>
             
           </Collapse>
+          </div>
 
         </Navbar>
       
