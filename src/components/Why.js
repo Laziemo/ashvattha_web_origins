@@ -42,7 +42,7 @@ class Why extends Component {
                  <br />
                 <div className="col" >
                    
-                    <br />
+              
                     <br />
 
                         <h2 className="blue-font " style={{textAlign:"left", marginLeft: "15px"}}>Why?</h2>

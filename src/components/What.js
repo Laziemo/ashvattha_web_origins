@@ -90,8 +90,8 @@ renderSection(to,from){
         reset={true}>
         {props => (
         <div style={props}>
-        <div className="row ">
-          <div className="col " style={{textAlign: "center"}}>
+        <div className="row">
+          <div className="col-sm-12 col-md-6 col-lg-6" style={{textAlign: "center"}}>
               <br />
               <img className="" 
                 src={YOUTH} 
@@ -101,7 +101,7 @@ renderSection(to,from){
               <br />
               <h3 className="yellow-font " style={{textAlign: "center"}}> Youth </h3>
               <br />
-              <div className="container " style={{width:"420px"}}>
+              <div className="container ">
                 <p>Our interactive coaching style builds onfidence in kids via peer interaction. Alongside this we build strong fundamentals through classic Trinity certified training methods.</p>
                 <br />
               </div>
@@ -115,7 +115,7 @@ renderSection(to,from){
               </Button>
               
           </div>
-          <div className="col " style={{textAlign: "center"}}>
+          <div className="col-sm-12 col-md-6 col-lg-6" style={{textAlign: "center"}}>
               <br />
               <img className="" 
                 src={PROFESSIONAL} 
@@ -125,7 +125,7 @@ renderSection(to,from){
               <br />
               <h3 className="yellow-font "> Professional </h3>
               <br />
-              <div className="container " style={{width:"420px"}}>
+              <div className="container ">
                 <p >Training working professionals in enterprise communication and etiquette.</p>
                 <br />
               </div>
