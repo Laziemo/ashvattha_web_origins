@@ -72,12 +72,14 @@ const styles = theme => ({
 class Who extends Component{
   constructor(props){
     super(props);
-
+    this.myRef = React.createRef();
     this.state={
       value: 0,
     };
     this.handleChange=this.handleChange.bind(this);
     this.renderContent=this.renderContent.bind(this);
+    this.scrollToMyRef=this.scrollToMyRef.bind(this);
+
   }
 // ------------------ '(◣_◢)' ------------------
   handleChange(e,value){
@@ -98,8 +100,12 @@ class Who extends Component{
     }
   }  
 // ------------------ '(◣_◢)' ------------------
+  scrollToMyRef = () => {
+    window.scrollTo(0, this.myRef.current.offsetTop)   
+  }
+// ------------------ '(◣_◢)' ------------------
   render(){
-    const { classes } = this.props;
+    const { classes, id } = this.props;
     const { value } = this.state;
     console.log(this.state.value);
     return(
@@ -111,7 +117,7 @@ class Who extends Component{
       >
       {props => (
         <div style={props}>
-        <div className="">
+        <div >
           <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}
@@ -124,7 +130,11 @@ class Who extends Component{
           </Spring>
           <br />
           <br />
-          <div className="container">
+          <div 
+            className="container" 
+            ref={this.myRef}
+            id={id}
+          >
                 <h2 className="blue-font">Who?</h2>
           </div>
          

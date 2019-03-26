@@ -15,11 +15,11 @@ import EMAIL from '../assets/05/email.png';
 import PHONE from '../assets/05/phone.png';
 
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
-const Where = () =>{
-
+const Where = (props) =>{
+  const { id  } = props;
     return(
-     
-        <div className="container-fluid cream-back " style={{textAlign: "left"}}>
+    
+        <div className="container-fluid cream-back " style={{textAlign: "left"}} id={id}>
 
           <div className="row">
             

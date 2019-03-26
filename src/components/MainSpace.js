@@ -7,7 +7,7 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 import React, {Component} from 'react';
 
-
+import { Link, animateScroll as scroll } from "react-scroll";
 import Jumbo from "./Jumbo";
 import Who from "./Who";
 import What from "./What";
@@ -29,10 +29,10 @@ class MainSpace extends Component{
     return(
       <div className="white-back ">
         <Jumbo data={HOME_JUMBO} />
-        <Who />
-        <What />
-        <Why />
-        <Where />
+        <Who id="who"/>
+        <What id="what"/>
+        <Why id="why"/>
+        <Where id="where"/>
       </div>
     );
   }

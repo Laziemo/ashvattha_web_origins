@@ -243,7 +243,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={cover.img}
                                 alt={cover.title}
-                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"666px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                                 
                             />
                         
@@ -261,7 +261,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={testimonial.img}
                                 alt={testimonial.title}
-                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"666px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                             />
                         
                             </Carousel.Item>
@@ -281,7 +281,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"512px",
+                                    height:"666px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -307,7 +307,7 @@ class Gallery extends Component {
                             src={photo.img}
                             alt={photo.title}
                             style={{width:"360px",
-                                height:"512px",
+                                height:"666px",
                                 display: "flex", 
                                 alignItems: "center",
                                 justifyContent:"center", 
@@ -333,7 +333,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"5120px",
+                                    height:"666px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -359,7 +359,7 @@ class Gallery extends Component {
                                 src={photo.img}
                                 alt={photo.title}
                                 style={{width:"360px",
-                                    height:"512px",
+                                    height:"666px",
                                     display: "flex", 
                                     alignItems: "center",
                                     justifyContent:"center", 
@@ -384,7 +384,7 @@ class Gallery extends Component {
                                 className="d-block w-100"
                                 src={cover.img}
                                 alt={cover.title}
-                                style={{width:"360px",height:"512px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
+                                style={{width:"360px",height:"666px",display: "flex", alignItems: "center",justifyContent:"center", border:"3px solid black"}}                               
                                 
                             />
                         
@@ -435,7 +435,7 @@ class Gallery extends Component {
                 <hr />
                 
                 <div className="row ">
-                    <div className="col-sm-6 col-md-6 col-lg-7" style={{marginLeft:"0px"}}>
+                    <div className="col-sm-12 col-md-8 col-lg-7" style={{marginLeft:"0px"}}>
 
                     <Carousel
                         activeIndex={index}

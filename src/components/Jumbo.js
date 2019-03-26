@@ -74,6 +74,8 @@ class Jumbo extends Component{
     
     return(
       <div className="cream-back">
+      <br />
+      <br />
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}
