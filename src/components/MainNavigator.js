@@ -68,7 +68,7 @@ render() {
           </NavbarBrand>
 
           </div>
-          <div className="col" style={{}}>
+          <div className="col" style={{fontSize: "22px"}}>
 
           <NavbarToggler onClick={this.toggle} className="mr-2" style={{marginRight: "10px"}}/>
 
