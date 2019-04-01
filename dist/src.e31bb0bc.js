@@ -73678,7 +73678,7 @@ function (_Component) {
       return _react.default.createElement("div", {
         className: "container-fluid white-back"
       }, _react.default.createElement("br", null), _react.default.createElement("div", {
-        className: "row outline"
+        className: "row"
       }, _react.default.createElement(_renderprops.Spring, {
         from: {
           opacity: 0
@@ -73692,7 +73692,7 @@ function (_Component) {
         }
       }, function (Props) {
         return _react.default.createElement("div", {
-          className: "row outline",
+          className: "row",
           style: Props
         }, _react.default.createElement("img", {
           src: _leftstair.default,
@@ -78362,7 +78362,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38309" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44587" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

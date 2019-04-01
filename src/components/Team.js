@@ -53,13 +53,13 @@ class Team extends Component{
       <div className="container-fluid white-back">
       <br />
       
-          <div className="row outline">
+          <div className="row">
           <Spring
             from={{ opacity: 0 }}
             to={{ opacity: 1 }}
             config={{delay: 200, tension: 60}}>
           {Props => (
-            <div className="row outline" style={Props}>
+            <div className="row" style={Props}>
             <img src={LSTAIR} className="lstair"></img>
     
             {
