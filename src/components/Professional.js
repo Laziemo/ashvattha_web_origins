@@ -16,7 +16,7 @@ import "../basics.css";
 const Course = (props)=>{
  
     return (
-      <div className="col-md-4 col_centered ">
+      <div className="col-lg-4 col_centered ">
           <div className="row">
              <img src={props.data.img} style={{width: "320px", height: "320px", margin:"0 auto"}} alt={props.data.alt} />
           </div>
@@ -49,36 +49,32 @@ class Pro extends Component{
 // ------------------ '(◣_◢)' ------------------
   render(){
     return(
-        <div className="container-fluid white-back">
-        <Spring
-        from={{ marginRight: -10000 }}
-        to={{ marginRight: 1 }}
-        config={{delay: 200, tension: 60}}
-        >
-        {props => (
-        <div style={props}>
-        <br />
+        <div className="container-fluid  white-back">
         
+            <Spring
+              from={{marginRight: -10000}}
+              to={{ marginRight: 0 }}
+              config={{delay: 100, tension: 30}}
+            >
+            {Props => (
+            <div style={Props}>
+              <div className="row">
 
-            <div className="row">
-            {
-            PRO_DATA.map((unit)=>{
-            return(
-                <Course key={unit.id} data={unit} />
-            )
-            })
-            }
-            </div>
-            <br />
-            <br />
-            
-
-
-
-        </div>)}
-        </Spring>
+              {
+                PRO_DATA.map((unit)=>{
+                  return(
+                      <Course key={unit.id} data={unit} />
+                  );
+                })
+              }
+              </div>
+            </div>  
+            )}
+            </Spring>
+        
+    
         </div>
-      );
+    );
   }
 // ------------------ '(◣_◢)' ------------------
 

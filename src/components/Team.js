@@ -52,30 +52,33 @@ class Team extends Component{
     return(
       <div className="container-fluid white-back">
       <br />
-      <Spring
+      
+          <div className="row outline">
+          <Spring
             from={{ opacity: 0 }}
             to={{ opacity: 1 }}
             config={{delay: 200, tension: 60}}>
-        {Props => (
-        <div style={Props}>
-        <img src={LSTAIR} className="lstair"></img>
-        <br />
-          <div className="row">
-          {
-            UNIT_DATA.map((unit)=>{
-            return(
-              <Unit key={unit.id} data={unit} />
-            )
-            })
-          }
+          {Props => (
+            <div className="row outline" style={Props}>
+            <img src={LSTAIR} className="lstair"></img>
+    
+            {
+              UNIT_DATA.map((unit)=>{
+                return(
+                  <Unit key={unit.id} data={unit} />
+                )
+              })
+            }      
+          
+            <br />
+            <br />
+            <br />
+            <img src={RSTAIR} className="rstair"></img> 
+
+            </div>
+          )}
+          </Spring>
           </div>
-      
-          <img src={RSTAIR} className="rstair"></img>
-          <br />
-          <br />
-          <br />
-        </div>)}
-        </Spring>
       </div>
       );
   }

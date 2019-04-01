@@ -8,11 +8,12 @@ developed by lm(•̪●)==ε/̵͇̿​̿/’̿’̿ ̿ ̿̿ `(•.°)~
 import React, { Component } from 'react';
 
 
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Fade } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Button from '@material-ui/core/Button';
 
 import { transparent } from 'material-ui/styles/colors';
  
@@ -25,19 +26,6 @@ import ALICE_ALBUM from '../data/aliceAlbum';
 import JUNGLE_BOOK_ALBUM from '../data/jungleBookAlbum';
 import HOSPIRA_ALBUM from '../data/hospiraAlbum';
 
-import request from 'request';
-import { EditorBorderAll } from 'material-ui/svg-icons';
-
-let options = {
-    method: 'POST',
-    url: process.env.ALBUM_SERVER,
-    headers:
-    {
-    "Content-Type": 'application/json'
-    },
-    body: {},
-    json: true
-};
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
 const styles = theme => ({
     root: {
@@ -68,8 +56,7 @@ const styles = theme => ({
       },
       '&$tabSelected': {
         color: '#ef8354',
-  
-        
+   
       },
       '&:focus': {
         color: '#ef8354',
@@ -78,6 +65,34 @@ const styles = theme => ({
       },
     },
     tabSelected: {},
+
+    yellow:{
+        borderRadius: "0px",
+        marginRight: "12px",
+        outline: "none",
+        color: "#333333",
+        backgroundColor: '#ffb833',
+        fontFamily: "Quicksand",
+        '&:hover': {
+          backgroundColor: '#4fb0c6',
+        },
+      },
+      transparent:{
+        borderRadius: "0px",
+        outline: "none",
+        color: "#f7f7f2",
+        backgroundColor: 'transparent',
+        fontFamily: "Quicksand",
+    
+        '&:hover': {
+          backgroundColor: '#ffb833',
+        },
+        '&:focus': {
+          color: '#ef8354',
+          outline: "none",
+    
+        }
+      }
   });
 // ------------------ ┌∩┐(◣_◢)┌∩┐ ------------------
   
@@ -90,6 +105,8 @@ class Gallery extends Component {
         this.handleSlide = this.handleSlide.bind(this);
         this.handleImageClick = this.handleImageClick.bind(this);
         this.handleTab=this.handleTab.bind(this);
+        this.handleButton=this.handleButton.bind(this);
+
         this.renderCarouselItem=this.renderCarouselItem.bind(this);
 
         this.state = {
@@ -101,8 +118,10 @@ class Gallery extends Component {
             value: 0,
         };
       }
+
 // ------------------ '(◣_◢)' ------------------
-    
+// ------------------ '(◣_◢)' ------------------
+
     handleSlide(selectedIndex, e) {
     //this manages the data in state based on the current item in the carousel
     //initialize for every newly added album
@@ -254,6 +273,56 @@ class Gallery extends Component {
 
 // ------------------ '(◣_◢)' ------------------
     
+    handleButton(value) {
+        if(value===0){
+            this.setState({
+                index:GALLERY_COVER[0].index,
+                title:GALLERY_COVER[0].title,
+                sub: GALLERY_COVER[0].sub,
+                album: "gallery_cover"
+            }); 
+        }
+        else if(value===1){
+            alert("Download will be enabled soon :)")
+        }
+    
+    }
+
+// ------------------ '(◣_◢)' ------------------
+    renderButtonPair(album){
+        console.log("FROM RBP" ,album);
+        if(album!=="gallery_cover" && album!=="testimonials"){
+            const wantFade=true;
+            return(
+                <Fade in={wantFade} appear={wantFade}>
+                <div className="row">
+
+                    <Button 
+                        variant="outlined" 
+                        component="button"
+                        className={this.props.classes.yellow}
+                        onClick={() => {this.handleButton(0)} }
+                    >
+                    Back
+                    </Button>
+
+                    <Button 
+                        variant="outlined"
+                        component="button"
+                        className={this.props.classes.transparent} 
+                        onClick={() => {this.handleButton(1)} }
+                    >
+                    Download   
+                    </Button>
+
+
+                </div>
+                </Fade>
+            );
+        }
+    }
+// ------------------ '(◣_◢)' ------------------
+
     renderCarouselItem(album){
     //renders an album to the carouseel based on state{album}
     //add new case for every new album
@@ -427,7 +496,7 @@ class Gallery extends Component {
         console.log(album);
         return (
             <div className="container-fluid black-back " >
-                
+
                 <br />
                 <div className="container-fluid">
                     
@@ -462,25 +531,25 @@ class Gallery extends Component {
                 <div className="row ">
                     <div className="col-sm-12 col-md-8 col-lg-7" style={{marginLeft:"0px"}}>
 
-                    <Carousel
-                        className="box"
-                        activeIndex={index}
-                        direction={direction}
-                        onSelect={this.handleSlide}
-                    
-                        controls={true}
-                        wrap={true}
-                        indicators={true}
-                        slide={true}
-                        interval={10000}
+                        <Carousel
+                            className="box"
+                            activeIndex={index}
+                            direction={direction}
+                            onSelect={this.handleSlide}
                         
-                    >
+                            controls={true}
+                            wrap={true}
+                            indicators={true}
+                            slide={true}
+                            interval={10000}
+                            
+                        >
 
-                    {
-                    this.renderCarouselItem(album)
-                    }    
-                    
-                    </Carousel>
+                        {
+                        this.renderCarouselItem(album)
+                        }    
+                        
+                        </Carousel>
 
                     <br />
                         
@@ -497,15 +566,17 @@ class Gallery extends Component {
                         <div className="row" style={{marginTop:"0%"}}>   
                             <p className="">{sub}</p>
                         </div>
-        
-                       
+                        
+                        {
+                        this.renderButtonPair(album)
+                        } 
+                        
                     </div>
                     
                 </div>
               
                 <br />
                 <br />
-    
             </div>
         );
     }

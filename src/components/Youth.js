@@ -50,9 +50,9 @@ class Youth extends Component{
     return(
       <div className="container-fluid white-back">
         <Spring
-        from={{ marginLeft: -10000 }}
+        from={{marginLeft: -20000 }}
         to={{ marginLeft: 1 }}
-        config={{delay: 200, tension: 60}}
+        config={{delay: 100, tension: 30}}
         >
         {props => (
         <div style={props}>
