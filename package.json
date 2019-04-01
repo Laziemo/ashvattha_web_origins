@@ -1,6 +1,6 @@
 {
   "name": "ashvattha_web_origins",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Ashvattha Web Origins",
   "main": "index.js",
   "scripts": {
